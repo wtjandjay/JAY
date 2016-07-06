@@ -1,0 +1,22 @@
+package com.diligroup.UserSet.fragment;
+
+import com.diligroup.R;
+import com.diligroup.base.BaseFragment;
+
+/**
+ *
+ * Created by Kevin on 2016/7/4.
+ */
+public class UserSetFragment extends BaseFragment {
+
+
+//    @Override
+//    public void setTv(TextView tv_fg) {
+//
+//    }
+
+    @Override
+    public int getLayoutXml() {
+        return R.layout.fragment_user;
+    }
+}

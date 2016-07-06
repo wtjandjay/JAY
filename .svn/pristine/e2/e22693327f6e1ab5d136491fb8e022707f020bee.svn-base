@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/comm_title"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="轻体力"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.diligroup.view.TagFlowLayout
+        android:id="@+id/id_flowlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        zhy:max_select="1">
+
+    </com.diligroup.view.TagFlowLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="中体力"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.diligroup.view.TagFlowLayout
+        android:id="@+id/id_flowlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        zhy:max_select="1">
+
+    </com.diligroup.view.TagFlowLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="重体力"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.diligroup.view.TagFlowLayout
+        android:id="@+id/id_flowlayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        zhy:max_select="1">
+
+    </com.diligroup.view.TagFlowLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bt_commit_work"
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
