@@ -1,5 +1,7 @@
 package com.diligroup.UserSet.activity;
 
+import android.view.KeyEvent;
+
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.utils.NetUtils;
@@ -57,4 +59,21 @@ public class ReportSex extends BaseAcitvity {
 //            }
 //        });
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            readyGo(UserInfoActivity.class);
+//            this.finish();
+        }
+        return true;
+    }
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//      readyGo(UserInfoActivity.class);
+//        this.finish();
+//
+//    }
 }

@@ -17,6 +17,8 @@ import com.diligroup.Before.fragment.BeforeFragment;
 import com.diligroup.Home.fragment.HomeFragment;
 import com.diligroup.R;
 import com.diligroup.UserSet.fragment.UserSetFragment;
+import com.diligroup.base.BaseAcitvity;
+import com.diligroup.utils.NetUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseAcitvity {
     public static final int HOME = 0;
     public static final int BEFORE = 1;
     public static final int AFTER = 2;
@@ -39,19 +41,34 @@ public class HomeActivity extends AppCompatActivity {
             R.drawable.selector_tab3,
             R.drawable.selector_tab4
     };
-    private List<String> titles;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+    private  List<String> titles;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+    protected int getContentViewLayoutID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void onNetworkConnected(NetUtils.NetType type) {
+
+    }
+
+    @Override
+    protected void onNetworkDisConnected() {
+
+    }
+
+    @Override
+    public void setTitle() {
+        super.setTitle();
+        tv_title.setText("首页");
+    }
+
+    @Override
+    protected void initViewAndData() {
         mViewPager.setOffscreenPageLimit(4);
         setupViewPager(mViewPager);
+
         titles = new ArrayList<>();
         titles.add("首页");
         titles.add("餐前指导");
@@ -64,11 +81,11 @@ public class HomeActivity extends AppCompatActivity {
         mTablayout.addTab(mTablayout.newTab());
 
         mTablayout.setupWithViewPager(mViewPager);
+
         setupTabIcons();
         mViewPager.setCurrentItem(1);
         mViewPager.setCurrentItem(0);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        mViewPager.addOnPageChangeListener(changeListener);
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -99,16 +116,10 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-
-    }
 
 
 
-    public static class MyPagerAdapter extends FragmentPagerAdapter {
+    public  class MyPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragments = new ArrayList<>();
         private final List<String> mFragmentTitles = new ArrayList<>();
 
@@ -123,6 +134,7 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
+
             return mFragments.get(position);
         }
 
@@ -136,4 +148,33 @@ public class HomeActivity extends AppCompatActivity {
 //            return mFragmentTitles.get(position);
 //        }
     }
+    ViewPager.OnPageChangeListener  changeListener=new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            switch (position){
+                case 0:
+                    tv_title.setText(titles.get(0));
+                    break;
+                case 1:
+                    tv_title.setText(titles.get(1));
+                    break;
+                case 2:
+                    tv_title.setText(titles.get(2));
+                    break;
+                case 3:
+                    tv_title.setText(titles.get(3));
+                    break;
+            }
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 }

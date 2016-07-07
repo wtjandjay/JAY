@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.diligroup.R;
 import com.diligroup.net.NetChangeObserver;
 import com.diligroup.net.NetStateReceiver;
 import com.diligroup.utils.NetUtils;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,7 +29,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseAcitvity extends AppCompatActivity {
     @Bind(R.id.comm_title)
-    public TextView tv_title;
+    public   TextView tv_title;
     Context mContext = null;
     @Bind(R.id.iv_back)
     public ImageView iv_back;
@@ -194,5 +199,28 @@ public abstract class BaseAcitvity extends AppCompatActivity {
         Intent intent = new Intent(this, clazz);
         startActivity(intent);
     }
+    private static Boolean isQuit = false;
+    Timer timer = new Timer();
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (!isQuit) {
+                isQuit = true;
+                Toast.makeText(getBaseContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                TimerTask task = null;
+                task = new TimerTask() {
+                    @Override
+                    public void run() {
+                        isQuit = false;
+                    }
+                };
+                timer.schedule(task, 2000);
+            } else {
+                finish();
+                System.exit(0);
+            }
+        }
+        return false;
 
+    }
 }
