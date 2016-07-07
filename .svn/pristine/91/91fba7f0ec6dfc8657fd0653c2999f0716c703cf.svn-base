@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/title_color">
+
+        <ImageView
+            android:id="@+id/iv_user_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/iv_user_header" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/iv_user_header"
+            android:text="12345678909"
+            android:textColor="@color/white"
+            android:id="@+id/tv_numb_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_go_userinfo"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_user_icon"
+            android:paddingLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/iv_user_icon"
+            android:textColor="@color/black"
+            android:text="我的资料"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:src="@drawable/iv_go_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+<View
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="18dp"
+    android:background="#DCDCDC"
+    android:layout_width="match_parent"
+    android:layout_marginRight="18dp"
+    android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_go_setting"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_set"
+            android:paddingLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/iv_set"
+            android:textColor="@color/black"
+            android:text="设置"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:src="@drawable/iv_go_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:background="#DCDCDC"
+        android:layout_width="match_parent"
+        android:layout_marginRight="18dp"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_go_service"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_service"
+            android:paddingLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/iv_service_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/iv_service"
+            android:textColor="@color/black"
+            android:text="服务中心"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:src="@drawable/iv_go_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:background="#DCDCDC"
+        android:layout_width="match_parent"
+        android:layout_marginRight="18dp"
+        android:layout_height="1dp"/>
+    <TextView
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="请输入您的宝贵意见 :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:background="#F0F0F0"
+        android:padding="10dp"
+        android:id="@+id/et_suggestions"
+        android:lines="6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:padding="15dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bt_submit"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:background="@drawable/em_button_login_bg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

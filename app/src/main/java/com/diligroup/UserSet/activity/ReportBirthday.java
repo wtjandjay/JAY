@@ -21,6 +21,12 @@ public class ReportBirthday extends BaseAcitvity {
     DatePicker data_select;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        isShowBack(true);
+    }
+
+    @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_select_birthday;
     }
@@ -38,6 +44,7 @@ public class ReportBirthday extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
+
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -56,6 +63,7 @@ public class ReportBirthday extends BaseAcitvity {
     @Override
     public void setTitle() {
         super.setTitle();
-//        tv_title.setText("选择生日");
+        tv_title.setText("您的生日");
+        title_infos.setText("您的生日？");
     }
 }

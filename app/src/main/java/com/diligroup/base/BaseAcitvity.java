@@ -28,6 +28,8 @@ public abstract class BaseAcitvity extends AppCompatActivity {
     Context mContext = null;
     @Bind(R.id.iv_back)
     public ImageView iv_back;
+
+    public TextView title_infos;
     protected abstract int getContentViewLayoutID();
 //    protected  abstract boolean isShowBackIcon
     /**
@@ -108,7 +110,12 @@ public abstract class BaseAcitvity extends AppCompatActivity {
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
         tv_title = ButterKnife.findById(this, R.id.comm_title);
+        title_infos= ButterKnife.findById(this, R.id.tv_title_info);
+        iv_back  = ButterKnife.findById(this,R.id.iv_back);
         if (tv_title!=null){
+            setTitle();
+        }
+        if (title_infos!=null){
             setTitle();
         }
         if (iv_back!=null){

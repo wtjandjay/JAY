@@ -69,12 +69,12 @@ public class UserInfoActivity extends BaseAcitvity {
     protected void initViewAndData() {
 
     }
-
-    @OnClick(R.id.rl_mingzu)
-    public void ClickMinzu() {
-        ToastUtil.showShort(this,"ClickedMinZU");
-        readyGo(ReportMinZu.class);
-    }
+//
+//    @OnClick(R.id.rl_mingzu)
+//    public void ClickMinzu() {
+//        ToastUtil.showShort(this,"ClickedMinZU");
+//        readyGo(ReportMinZu.class);
+//    }
 
     @OnClick(R.id.rl_sex)
     public void ClickSex() {
@@ -97,7 +97,7 @@ public class UserInfoActivity extends BaseAcitvity {
         readyGo(ReportOther.class);
     }
 
-    @OnClick(R.id.rl_tsrq)
+    @OnClick(R.id.rl_special)
     public void ClickTsrq() {
         readyGo(ReportSpecial.class);
     }
@@ -117,7 +117,7 @@ public class UserInfoActivity extends BaseAcitvity {
         readyGo(ReportWeight.class);
     }
 
-    @OnClick(R.id.rl_ysjj)
+    @OnClick(R.id.rl_noeat)
     public void ClickYsjj() {
         readyGo( ReportNoeat.class);
     }
@@ -125,6 +125,10 @@ public class UserInfoActivity extends BaseAcitvity {
     @OnClick(R.id.rl_work)
     public void ClickWork() {
         readyGo(ReportWork.class);
+    }
+    @OnClick(R.id.rl_allergy)
+    public void ClickAllergy(){
+        readyGo(ReportAllergy.class);
     }
 
 }

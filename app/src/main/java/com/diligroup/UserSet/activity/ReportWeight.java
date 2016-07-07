@@ -1,7 +1,5 @@
 package com.diligroup.UserSet.activity;
 
-import android.os.Bundle;
-
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.utils.NetUtils;
@@ -11,7 +9,6 @@ import com.diligroup.view.WheelView;
 import java.util.Arrays;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -38,11 +35,11 @@ public class ReportWeight extends BaseAcitvity {
 
     }
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_weight);
-        ButterKnife.bind(this);
+    protected void initViewAndData() {
+        isShowBack(true);
         wheelView.setOffset(3);
         wheelView.setItems(Arrays.asList(WEIGHT_DATA));
         wheelView.setOnWheelViewListener(new WheelView.OnWheelViewListener() {
@@ -54,11 +51,6 @@ public class ReportWeight extends BaseAcitvity {
         });
     }
 
-    @Override
-    protected void initViewAndData() {
-
-    }
-
     @OnClick(R.id.bt_ok_weight)
     public void reportWeight() {
         ToastUtil.showShort(this, select_where);
@@ -67,6 +59,7 @@ public class ReportWeight extends BaseAcitvity {
     @Override
     public void setTitle() {
         super.setTitle();
-//        tv_title.setText("体重");
+        tv_title.setText("体重");
+        title_infos.setText("您的体重?");
     }
 }

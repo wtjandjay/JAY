@@ -39,6 +39,7 @@ public class ReportHeight extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
+        isShowBack(true);
         wheelView.setOffset(1);
         wheelView.setItems(Arrays.asList(HEIGHT_DATA));
         wheelView.setOnWheelViewListener(new WheelView.OnWheelViewListener() {
@@ -58,6 +59,7 @@ public class ReportHeight extends BaseAcitvity {
     @Override
     public void setTitle() {
         super.setTitle();
-//        tv_title.setText("身高");
+        tv_title.setText("身高");
+        title_infos.setText("您的身高?");
     }
 }
