@@ -37,4 +37,9 @@ public class SettingActivity extends BaseAcitvity {
 
     }
 
+    @Override
+    public void setTitle() {
+        super.setTitle();
+        tv_title.setText("设置");
+    }
 }

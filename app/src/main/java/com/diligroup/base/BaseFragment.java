@@ -32,12 +32,19 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutXml(), null);
         ButterKnife.bind(this, view);
-
+        setViews();
+        setListeners();
         return view;
     }
+
     public abstract int getLayoutXml();
-    public void GoActivity(Class  classes){
-        Intent intent=new Intent(this.getActivity(), classes);
+
+    public abstract void setViews();
+
+    public abstract void setListeners();
+
+    public void GoActivity(Class classes) {
+        Intent intent = new Intent(this.getActivity(), classes);
         startActivity(intent);
     }
 }

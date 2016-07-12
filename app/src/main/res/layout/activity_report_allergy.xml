@@ -21,70 +21,106 @@
         android:layout_height="10dp"/>
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_weight="7"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="0dp">
+        <ScrollView
+            android:scrollbars="none"
             android:background="#D9D9D9"
             android:orientation="vertical"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_height="match_parent">
-            <Button
-                android:lines="1"
-                android:drawableLeft="@drawable/iv_cpfl"
-                android:text="成品分类"
-                android:textSize="15sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_gulei_normal"
-                android:drawablePadding="10dp"
-                android:text="谷类"
-                android:id="@+id/bt_class_gu"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_dou_normal"
-                android:drawablePadding="10dp"
-                android:text="豆类"
-                android:id="@+id/bt_class_dou"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_shucai_normal"
-                android:drawablePadding="10dp"
-                android:text="蔬菜类"
-                android:id="@+id/bt_class_shucai"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_fruit_normal"
-                android:drawablePadding="10dp"
-                android:text="水果类"
-                android:id="@+id/bt_class_fruit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_jianguo_normal"
-                android:drawablePadding="10dp"
-                android:text="坚果类"
-                android:id="@+id/bt_class_jianguo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@drawable/iv_milk_normal"
-                android:drawablePadding="10dp"
-                android:text="乳制品类"
-                android:id="@+id/bt_class_milk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <FrameLayout
-            android:id="@+id/frame_list"
-            android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <Button
+                 android:clickable="false"
+                    android:layout_marginLeft="5dp"
+                    android:lines="1"
+                    android:drawablePadding="3dp"
+                    android:drawableLeft="@drawable/iv_cpfl"
+                    android:text="成品分类"
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/iv_gulei_normal"
+                    android:drawablePadding="7dp"
+                    android:text="谷类"
+                    android:id="@+id/bt_class_gu"
+                    android:textColor="@drawable/button_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@drawable/button_text_color"
+                    android:drawableTop="@drawable/iv_dou_normal"
+                    android:drawablePadding="7dp"
+                    android:text="豆类"
+                    android:background="@drawable/button_background"
+                    android:id="@+id/bt_class_dou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/iv_shucai_normal"
+                    android:drawablePadding="7dp"
+                    android:text="蔬菜类"
+                    android:id="@+id/bt_class_shucai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:drawableTop="@drawable/iv_fruit_normal"
+                    android:drawablePadding="7dp"
+                    android:text="水果类"
+                    android:id="@+id/bt_class_fruit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:drawableTop="@drawable/iv_jianguo_normal"
+                    android:drawablePadding="7dp"
+                    android:text="坚果类"
+                    android:id="@+id/bt_class_jianguo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:drawableTop="@drawable/iv_milk_normal"
+                    android:drawablePadding="7dp"
+                    android:text="乳制品类"
+                    android:id="@+id/bt_class_milk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </ScrollView>
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/list_foods_detail"
+            android:layout_weight="5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
-
-        </FrameLayout>
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/bt_commit_allergy"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="确定"
+            android:background="@drawable/em_button_login_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>

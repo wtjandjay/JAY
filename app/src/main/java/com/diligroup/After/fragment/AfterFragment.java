@@ -17,4 +17,14 @@ public class AfterFragment extends BaseFragment {
     public int getLayoutXml() {
         return R.layout.fragment_home;
     }
+
+    @Override
+    public void setViews() {
+
+    }
+
+    @Override
+    public void setListeners() {
+
+    }
 }
