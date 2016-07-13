@@ -33,7 +33,8 @@ public class ReportOther extends BaseAcitvity {
     }
     @Override
     protected void initViewAndData() {
-            isShowBack(true);
+        isShowBack(true);
+
 //        otherDatas = new String[]{"减脂", "增肌"};
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
 //                android.R.layout.simple_list_item_multiple_choice, otherDatas);

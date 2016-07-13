@@ -25,8 +25,6 @@ import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -51,19 +49,19 @@ public class AppUtils {
 	public static  final String AppFileNameFileDir="file";
 	public static  final String AppFileNameOtherDir="other";
 	public static  final String AppThemeImgDir = "theme";
-	private static long lastClickTime; 
+	private static long lastClickTime;
 	private static int xuhao=1;
 	// UTF-8 encoding
     private static final String ENCODING_UTF8 = "UTF-8";
-    private static final byte[] SECRET_KEY_NORMAL;
-    
+//    private static final byte[] SECRET_KEY_NORMAL;
+
     /** DATE FORMAT 日期格式 例如"yyyy-MM-dd HH:mm:ss"*/
     public static final String DATEFORMAT_YYMMDD_HHMMSS="yyyy-MM-dd HH:mm:ss";
     public static final String DATEFORMAT_YYMMDD="yyyy-MM-dd";
     public static final long CATCHE_EXPIRED_TIME=1*24*60*60*1000;
-    
+
     static {
-        SECRET_KEY_NORMAL =  DigestUtils.md5(DigestUtils.md5("7U727ALEWH8".getBytes()));
+//        SECRET_KEY_NORMAL =  DigestUtils.md5(DigestUtils.md5("7U727ALEWH8".getBytes()));
     }
 	public static enum StorageMode {
 		/**手机内存 */
@@ -83,12 +81,12 @@ public class AppUtils {
 	}
 	private static TrustManager[] trustAllCerts;
 	private static StorageMode storageMode;
-	
+
 	/** SDCard是否可用 **/
-	
+
 	/** SDCard的根路径 **/
 	private static String SDCARD_PATH;
-	
+
 	public static final int NOCONNECTION = 0;
 	public static final int WIFI = 1;
 	public static final int MOBILE = 2;
@@ -114,17 +112,17 @@ public class AppUtils {
 	 * 防止按钮被连续点击
 	 * int seon  秒数 如：1、10
 	 * */
-	public static boolean isFastDoubleClick(int seon) {  
-		
+	public static boolean isFastDoubleClick(int seon) {
+
         long time = System.currentTimeMillis();
-        long timeD = time - lastClickTime;  
+        long timeD = time - lastClickTime;
         seon=seon*1000;
-        if ( 0 < timeD && timeD < seon) {     
-            return true;     
-        }     
-        lastClickTime = time;     
-        return false;     
-    }  
+        if ( 0 < timeD && timeD < seon) {
+            return true;
+        }
+        lastClickTime = time;
+        return false;
+    }
 	/**
 	 * 取得SD卡路径，以/结尾
 	 * @return SD卡路径
@@ -213,16 +211,16 @@ public class AppUtils {
             LogUtils.e(e.getMessage(), e.toString());
         }
         HttpsURLConnection.setDefaultHostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-    } 
+    }
 	/**
      * Returns whether the network is available
      */
     public static boolean isNetworkAvailable(Context context) {
-        
+
         if (context == null) {
             return false;
         }
-        
+
         ConnectivityManager connectivity = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity == null) {
@@ -268,7 +266,7 @@ public class AppUtils {
         }
         return false;
     }
-    
+
     public static String getCurTime(){
     	SimpleDateFormat df = new SimpleDateFormat(DATEFORMAT_YYMMDD_HHMMSS);//设置日期格式
          return df.format(new Date());// new Date()为获取当前系统时间
@@ -278,7 +276,7 @@ public class AppUtils {
     	SimpleDateFormat dfTemp = new SimpleDateFormat(format);//设置日期格式
          return dfTemp.format(new Date());// new Date()为获取当前系统时间
     }
-    
+
     /** 根据日期格式获取当前日期 */
     public static String getStrTime(String time){
     	String mTime = time.replaceAll("-", "");
@@ -289,7 +287,7 @@ public class AppUtils {
      * <p>
      * Get string in UTF-8 encoding
      * </p>
-     * 
+     *
      * @param b
      *            byte array
      * @return string in utf-8 encoding, or empty if the byte array is not encoded with UTF-8
@@ -334,7 +332,7 @@ public class AppUtils {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 	判断当前应用是否是顶栈
 	 * @param context
@@ -351,8 +349,8 @@ public class AppUtils {
 			if (!TextUtils.isEmpty(curPackage) && curPackage.equals(tasksInfo.get(0).topActivity.getPackageName())) {
 				/**当前应用是顶栈*/
 				return true;
-			} 
-			
+			}
+
 		}
 		}catch(Exception ex){
 			LogUtils.e(ex.toString());
@@ -378,14 +376,14 @@ public class AppUtils {
             }
             fis=null;
         }
-         
+
         return s;
     }
-	
-	 
+
+
 	/**
 	 * <code>getLocalIPAddress</code>
-	 * @description: TODO(获得本机的IP地址) 
+	 * @description: TODO(获得本机的IP地址)
 	 * @return
 	 * @throws SocketException
 	 * @since   2014-4-16    yourname
@@ -399,20 +397,20 @@ public class AppUtils {
     	            if(android.os.Build.VERSION.SDK_INT>10){
     	                /**android 4.0以上版本*/
     	                if(!inetAddress.isLoopbackAddress() && (inetAddress instanceof Inet4Address)){
-    	                    return inetAddress.getHostAddress().toString(); 
-    	                } 
+    	                    return inetAddress.getHostAddress().toString();
+    	                }
     	            }else {
-    	                if(!inetAddress.isLoopbackAddress()){ 
-                            return inetAddress.getHostAddress().toString(); 
-                        } 
+    	                if(!inetAddress.isLoopbackAddress()){
+                            return inetAddress.getHostAddress().toString();
+                        }
     	            }
-    	        } 
-    	    } 
+    	        }
+    	    }
 	    }catch(Exception ex){
 	        ex.toString();
 	    }
-	    return null; 
-	} 
+	    return null;
+	}
 	/**
      * 计算md5值
      */
@@ -442,44 +440,44 @@ public class AppUtils {
         }
         return su.getMD5();
     }
-    
+
     /**
      * Get MD5 Code
      */
-    public static String getMD5(String text) {
-        try {
-            byte[] byteArray = text.getBytes("utf8");
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            md.update(byteArray, 0, byteArray.length);
-            return StringUtils.toHexString(md.digest(), false);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
-    
+//    public static String getMD5(String text) {
+//        try {
+//            byte[] byteArray = text.getBytes("utf8");
+//            MessageDigest md = MessageDigest.getInstance("MD5");
+//            md.update(byteArray, 0, byteArray.length);
+//            return StringUtils.toHexString(md.digest(), false);
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
+//        return "";
+//    }
+
     /**
      * Get MD5 Code
      */
-    public static String getMD5(byte[] byteArray) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            md.update(byteArray, 0, byteArray.length);
-            return StringUtils.toHexString(md.digest(), false);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
+//    public static String getMD5(byte[] byteArray) {
+//        try {
+//            MessageDigest md = MessageDigest.getInstance("MD5");
+//            md.update(byteArray, 0, byteArray.length);
+//            return StringUtils.toHexString(md.digest(), false);
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return "";
+//    }
     /**
      * <p>
      * Parse long value from string
      * </p>
-     * 
+     *
      * @param value
      *            string
      * @return long value
@@ -494,7 +492,7 @@ public class AppUtils {
             return 0L;
         }
     }
-    
+
     /**
      * 清除过期的缓存文件（FIle里）
      */
@@ -507,11 +505,11 @@ public class AppUtils {
 	                File cacheDirectory =new File(path);
 	                if (cacheDirectory.exists()) {
 	                    File[] files = cacheDirectory.listFiles();
-	                    
+
 	                    if (files == null || files.length == 0) {
 	                        return;
 	                    }
-	                  
+
 	                    long currentTime = System.currentTimeMillis();
 	                    for (File f : files) {
 	                    	if(isAllFile){
@@ -544,11 +542,11 @@ public class AppUtils {
 	                File cacheDirectory =new File(path);
 	                if (cacheDirectory.exists()) {
 	                    File[] files = cacheDirectory.listFiles();
-	                    
+
 	                    if (files == null || files.length == 0) {
 	                        return;
 	                    }
-	                  
+
 	                    long currentTime = System.currentTimeMillis();
 	                    for (File f : files) {
 	                    	long lastTime=f.lastModified();
@@ -567,7 +565,7 @@ public class AppUtils {
     }
     /**
 	 * 隐藏软键盘
-	 * 
+	 *
 	 * @param
 	 */
 	public static void hideSoftKeybord(Activity activity)
@@ -591,8 +589,8 @@ public class AppUtils {
 
 		}
 	}
-	 
-	
+
+
 	public synchronized static String getXuHao(){
 		xuhao++;
 		if(xuhao>9999){
@@ -610,7 +608,7 @@ public class AppUtils {
 		case 3:
 			xuString="0"+xuString;
 			break;
-		 
+
 		default:
 			break;
 		}
@@ -619,7 +617,7 @@ public class AppUtils {
 	public  static boolean  zipFile(File srcFile, File destFile, String comment){
 		ZipOutputStream zOutStream=null;
 		if(srcFile==null || destFile==null) return false;
-	 
+
 		long fileSize=srcFile.length();
 		if (!srcFile.exists()) {
 			return false;
@@ -655,12 +653,12 @@ public class AppUtils {
 		}
 		return true;
 	}
-	
+
 	public void saveImgToDisk(Context context){
-		
+
 		String cachePath = Environment.MEDIA_MOUNTED.equals(Environment
 				.getExternalStorageState()) ? context.getExternalCacheDir()
-				.getPath() : context.getCacheDir().getPath();	
+				.getPath() : context.getCacheDir().getPath();
 	}
-	
+
 }

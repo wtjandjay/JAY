@@ -60,6 +60,7 @@ public class ReportAllergy extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+
         getData();
         guleiArray=getResources().getStringArray(R.array.gulei);
         SimpleAdapter adapter = new SimpleAdapter(this, getData(), R.layout.item_allergy, new String[]{"image", "name"}, new int[]{R.id.iv_allergy_icon, R.id.tv_allergy_name});

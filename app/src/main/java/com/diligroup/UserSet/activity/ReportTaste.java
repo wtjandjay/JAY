@@ -39,7 +39,7 @@ public class ReportTaste extends BaseAcitvity {
     @Override
     public void setTitle() {
         super.setTitle();
-//        tv_title.setText("口味");
+        tv_title.setText("口味");
     }
 
     @Override
@@ -49,6 +49,7 @@ public class ReportTaste extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
+        isShowBack(true);
         getTasteData();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_multiple_choice, tasteArray);

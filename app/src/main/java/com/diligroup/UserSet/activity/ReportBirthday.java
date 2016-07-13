@@ -24,6 +24,7 @@ public class ReportBirthday extends BaseAcitvity {
     protected void onStart() {
         super.onStart();
         isShowBack(true);
+
     }
 
     @Override

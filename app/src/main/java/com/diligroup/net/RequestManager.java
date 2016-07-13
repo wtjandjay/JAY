@@ -224,8 +224,7 @@ public class RequestManager {
     private Request buildGetParams(String url, Map<String, String> params, boolean cache){
         StringBuilder builder = new StringBuilder();
         builder.append(url)
-                .append("?")
-        ;
+                .append("?");
         if (params != null) {
             Set<Map.Entry<String, String>> entries = params.entrySet();
             for (Map.Entry<String, String> entry : entries) {

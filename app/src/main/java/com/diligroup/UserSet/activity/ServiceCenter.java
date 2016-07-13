@@ -30,5 +30,6 @@ public class ServiceCenter extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+
     }
 }

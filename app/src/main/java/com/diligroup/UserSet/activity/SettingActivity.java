@@ -34,7 +34,7 @@ public class SettingActivity extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
-
+        isShowBack(true);
     }
 
     @Override

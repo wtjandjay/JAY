@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="请输入用户名"
-            android:inputType="textEmailAddress"
+            android:hint="请输入手机号码"
+            android:inputType="number"
             android:maxLines="1"
             android:singleLine="true" />
 
@@ -57,6 +57,7 @@
         android:visibility="gone" />
 
     <TextView
+        android:id="@+id/tv_forget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"

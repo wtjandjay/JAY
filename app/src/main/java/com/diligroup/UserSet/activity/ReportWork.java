@@ -56,7 +56,7 @@ public class ReportWork extends BaseAcitvity  {
 
     @Override
     protected void initViewAndData() {
-isShowBack(true);
+        isShowBack(true);
         initData();
 
         gv_light.setAdapter(new WorkAdapter(lightWork));

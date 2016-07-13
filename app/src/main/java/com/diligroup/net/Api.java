@@ -1,4 +1,8 @@
 package com.diligroup.net;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by hjf on 2016/6/27.
  */
@@ -9,29 +13,45 @@ public class Api {
      *
      * @param callback
      */
-    public static void login(String username, String password, RequestManager.ResultCallback callback) {
+    public static void login(String mobileNum, String password, RequestManager.ResultCallback callback) {
         //密码md5加密
 //        String encryptPassword = HashEncrypt.encode(HashEncrypt.CryptType.MD5, password);
-//        Map<String, String> map = getUnAuthParams();
-//        map.put("userName", username);
-//        map.put("password", encryptPassword);
-
-//        RequestManager.getInstance().postAsync(Action.LOGIN, map, callback);
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", "C0100");
+        map.put("type", "app_login");
+        map.put("userName", mobileNum);
+        map.put("password", password);
+        RequestManager.getInstance().postAsync(Action.LOGIN, map, callback);
     }
 
     /**
      * 注册接口
+     * 交易码transCode: C0100
+     * 交易类型type：add
      *
-     * @param phoneNum
      * @param callback
      */
-    public static void register(String phoneNum, String code,String umeng, RequestManager.ResultCallback callback) {
+    public static void register(String transCode, String type, String mobileNum, String password, RequestManager.ResultCallback callback) {
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", transCode);
+        map.put("type", type);
+        map.put("mobileNum", mobileNum);
+        map.put("password", password);
+        RequestManager.getInstance().getAsync(Action.REGISTER, map, callback);
+    }
 
-//        Map<String, String> map = getUnAuthParams();
-//        map.put("phoneNum", phoneNum);
-//        map.put("code", code);
-//        map.put("umeng",umeng);
-//
-//        RequestManager.getInstance().postAsync(Action.REGISTER, map, callback);
+    /**
+     * 获取手机验证码
+     *  找回密码的验证码
+     * @param phoneNum
+     */
+    public static void getCode(String phoneNum, RequestManager.ResultCallback callback) {
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.SMSCode);
+        map.put("type", "sendPhoneMes");
+        map.put("mobileNum", phoneNum);
+        map.put("mesType","1");
+        map.put("bizType","2");
+        RequestManager.getInstance().getAsync(Action.SMSCODE,map,callback);
     }
 }

@@ -6,20 +6,15 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.diligroup.R;
 import com.diligroup.net.NetChangeObserver;
 import com.diligroup.net.NetStateReceiver;
 import com.diligroup.utils.NetUtils;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -138,11 +133,17 @@ public abstract class BaseAcitvity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        AppManager.getAppManager().finishActivity();
+      //  AppManager.getAppManager().finishActivity();
     }
     public void isShowBack(Boolean  isShow ) {
         if (isShow){
         iv_back.setVisibility(View.VISIBLE);
+            iv_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
 
         }
     }
@@ -150,7 +151,7 @@ public abstract class BaseAcitvity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-        AppManager.getAppManager().finishActivity(this);
+    //    AppManager.getAppManager().finishActivity(this);
         NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
         NetStateReceiver.unRegisterNetworkStateReceiver(this);
     }
@@ -199,28 +200,28 @@ public abstract class BaseAcitvity extends AppCompatActivity {
         Intent intent = new Intent(this, clazz);
         startActivity(intent);
     }
-    private static Boolean isQuit = false;
-    Timer timer = new Timer();
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (!isQuit) {
-                isQuit = true;
-                Toast.makeText(getBaseContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
-                TimerTask task = null;
-                task = new TimerTask() {
-                    @Override
-                    public void run() {
-                        isQuit = false;
-                    }
-                };
-                timer.schedule(task, 2000);
-            } else {
-                finish();
-                System.exit(0);
-            }
-        }
-        return false;
-
-    }
+//    private static Boolean isQuit = false;
+//    Timer timer = new Timer();
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            if (!isQuit) {
+//                isQuit = true;
+//                Toast.makeText(getBaseContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+//                TimerTask task = null;
+//                task = new TimerTask() {
+//                    @Override
+//                    public void run() {
+//                        isQuit = false;
+//                    }
+//                };
+//                timer.schedule(task, 2000);
+//            } else {
+//                finish();
+//                System.exit(0);
+//            }
+//        }
+//        return false;
+//
+//    }
 }

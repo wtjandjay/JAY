@@ -40,6 +40,7 @@ public class UserInfoActivity extends BaseAcitvity {
     protected void onStart() {
         super.onStart();
         isShowBack(true);
+
     }
 
     @Override

@@ -40,6 +40,7 @@ public class ReportWeight extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+
         wheelView.setOffset(3);
         wheelView.setItems(Arrays.asList(WEIGHT_DATA));
         wheelView.setOnWheelViewListener(new WheelView.OnWheelViewListener() {

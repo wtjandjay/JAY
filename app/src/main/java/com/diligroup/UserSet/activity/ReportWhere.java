@@ -37,7 +37,7 @@ public class ReportWhere extends BaseAcitvity {
     @Override
     public void setTitle() {
         super.setTitle();
-//        tv_title.setText("地址");
+        tv_title.setText("地址");
     }
 
     @Override
@@ -63,7 +63,7 @@ public class ReportWhere extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
-//        tv_title.setText("籍贯");
+        isShowBack(true);
         select_where.setOnSelectingListener(new CityPicker.OnSelectingListener() {
             @Override
             public void selected(boolean selected) {
