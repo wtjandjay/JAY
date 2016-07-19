@@ -1,5 +1,7 @@
 package com.diligroup.net;
 
+import com.diligroup.utils.DigestUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,10 +19,10 @@ public class Api {
         //密码md5加密
 //        String encryptPassword = HashEncrypt.encode(HashEncrypt.CryptType.MD5, password);
         Map<String, String> map = new HashMap<>();
-        map.put("transCode", "C0100");
+        map.put("transCode", TransCode.LoginCode);
         map.put("type", "app_login");
-        map.put("userName", mobileNum);
-        map.put("password", password);
+        map.put("mobileNum", mobileNum);
+        map.put("password", DigestUtils.stringMD5(password));
         RequestManager.getInstance().postAsync(Action.LOGIN, map, callback);
     }
 
@@ -53,5 +55,12 @@ public class Api {
         map.put("mesType","1");
         map.put("bizType","2");
         RequestManager.getInstance().getAsync(Action.SMSCODE,map,callback);
+    }
+    /**
+     * 修改密码
+     *
+     */
+    public static void modifyPsd(){
+
     }
 }

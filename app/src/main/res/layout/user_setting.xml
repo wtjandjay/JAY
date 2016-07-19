@@ -39,7 +39,6 @@
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/selector_butn_toggle"
             android:checked="true"
             android:text=""
             android:textOff=""

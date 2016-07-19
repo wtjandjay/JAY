@@ -1,126 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:zhy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-    <include layout="@layout/comm_title"/>
+    android:orientation="vertical">
+
+    <include layout="@layout/comm_title" />
+
     <include
-        android:visibility="gone"
-        layout="@layout/title_info"/>
+        layout="@layout/title_info"
+        android:visibility="gone" />
+
     <com.diligroup.view.TagFlowLayout
         android:id="@+id/tag_allergy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        zhy:max_select="1"/>
+        zhy:max_select="10" />
+
     <View
-        android:background="#F0F0F0"
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp"
+        android:background="#F0F0F0" />
+
     <LinearLayout
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="7"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-        <ScrollView
-            android:scrollbars="none"
-            android:background="#D9D9D9"
-            android:orientation="vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="2"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:orientation="vertical"
+            android:background="#f0f0f0"
+            android:orientation="vertical">
+
+            <Button
+                android:background="#f0f0f0"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                 android:clickable="false"
-                    android:layout_marginLeft="5dp"
-                    android:lines="1"
-                    android:drawablePadding="3dp"
-                    android:drawableLeft="@drawable/iv_cpfl"
-                    android:text="成品分类"
-                    android:textSize="12sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:drawableLeft="@drawable/iv_cpfl"
+                android:drawablePadding="3dp"
+                android:lines="1"
+                android:text="成品分类"
+                android:textSize="12sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-                <Button
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/iv_gulei_normal"
-                    android:drawablePadding="7dp"
-                    android:text="谷类"
-                    android:id="@+id/bt_class_gu"
-                    android:textColor="@drawable/button_text_color"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@drawable/button_text_color"
-                    android:drawableTop="@drawable/iv_dou_normal"
-                    android:drawablePadding="7dp"
-                    android:text="豆类"
-                    android:background="@drawable/button_background"
-                    android:id="@+id/bt_class_dou"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/iv_shucai_normal"
-                    android:drawablePadding="7dp"
-                    android:text="蔬菜类"
-                    android:id="@+id/bt_class_shucai"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:drawableTop="@drawable/iv_fruit_normal"
-                    android:drawablePadding="7dp"
-                    android:text="水果类"
-                    android:id="@+id/bt_class_fruit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:drawableTop="@drawable/iv_jianguo_normal"
-                    android:drawablePadding="7dp"
-                    android:text="坚果类"
-                    android:id="@+id/bt_class_jianguo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:drawableTop="@drawable/iv_milk_normal"
-                    android:drawablePadding="7dp"
-                    android:text="乳制品类"
-                    android:id="@+id/bt_class_milk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        </ScrollView>
+                    <LinearLayout
+                        android:id="@+id/ll_guleis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/back_ground_item"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/image_button_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_gulei_selector" />
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="谷类"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDDDDD" />
+
+                    <LinearLayout
+                        android:background="@drawable/back_ground_item"
+                        android:id="@+id/ll_doulei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/ib_doulei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_doulei_selector" />
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/tv_doulei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="豆类"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDDDDD" />
+                    <LinearLayout
+                        android:background="@drawable/back_ground_item"
+                        android:id="@+id/ll_shucai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/ib_shucai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_shucai_selector" />
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/tv_shucai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="蔬菜类"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDDDDD" />
+                    <LinearLayout
+                        android:background="@drawable/back_ground_item"
+                        android:id="@+id/ll_fruit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+
+                            android:id="@+id/ib_fruit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_fruit_selector" />
+
+                        <TextView
+                            android:id="@+id/tv_fruit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="水果类"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDDDDD" />
+                    <LinearLayout
+
+                        android:background="@drawable/back_ground_item"
+                        android:id="@+id/ll_milk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+
+                            android:id="@+id/ib_milk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_milk_selector" />
+
+                        <TextView
+                            android:id="@+id/tv_milk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:layout_marginBottom="5dp"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="乳制品"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DDDDDD" />
+                    <LinearLayout
+                        android:background="@drawable/back_ground_item"
+                        android:id="@+id/ll_jianguo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+
+                            android:id="@+id/ib_jianguo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:clickable="true"
+                            android:contentDescription="@string/app_name"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/ib_jianguo_selector" />
+
+                        <TextView
+                            android:id="@+id/tv_jianguo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:text="坚果类"
+                            android:textColor="@color/tv_color_selector"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
         <ListView
-            android:scrollbars="none"
             android:id="@+id/list_foods_detail"
-            android:layout_weight="5"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
-        </ListView>
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:scrollbars="none" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/bt_commit_allergy"
-            android:layout_margin="5dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:text="确定"
-            android:background="@drawable/em_button_login_bg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/em_button_login_bg"
+            android:text="确定"
+            android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>

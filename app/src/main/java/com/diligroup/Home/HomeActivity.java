@@ -24,12 +24,11 @@ import com.diligroup.UserSet.fragment.UserSetFragment;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.EventBusBean;
 import com.diligroup.dialog.RotateShowProgressDialog;
-import com.diligroup.utils.AppUtils;
-import com.diligroup.utils.FileUtils;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.PictureFileUtils;
 import com.diligroup.utils.ToastUtil;
+import com.diligroup.utils.UpLoadPhotoUtils;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -42,10 +41,7 @@ import butterknife.Bind;
 import me.nereo.multi_image_selector.MultiImageSelector;
 
 public class HomeActivity extends BaseAcitvity {
-    public static final int HOME = 0;
-    public static final int BEFORE = 1;
-    public static final int AFTER = 2;
-    public static final int USER = 3;
+
 
     private static final int REQUEST_IMAGE = 2;
     private static final int CROP_CODE = 3;
@@ -82,7 +78,7 @@ public class HomeActivity extends BaseAcitvity {
         setupViewPager(mViewPager);
 
         titles = new ArrayList<>();
-        titles.add("首页1");
+        titles.add("首页");
         titles.add("餐前指导");
         titles.add("餐后评价");
         titles.add("我的");
@@ -170,7 +166,7 @@ public class HomeActivity extends BaseAcitvity {
                         sb.append(p);
                     }
                     LogUtils.i("onActivityResult方法=", sb.toString());
-                    startPhotoZoom(Uri.fromFile(new File(sb.toString())));
+                    new UpLoadPhotoUtils(this).startPhotoZoom(Uri.fromFile(new File(sb.toString())));
                 }
                 break;
             case CROP_CODE:
@@ -179,7 +175,7 @@ public class HomeActivity extends BaseAcitvity {
                     Bundle extras = data.getExtras();
                     if (extras != null) {
                         Bitmap photo = extras.getParcelable("data");
-                        mViewPager.setCurrentItem(3);
+//                        mViewPager.setCurrentItem(3);
 //                        new UserSetFragment().chageImage(photo);
 //                        new HomeFragment().chageImage(photo);
                         EventBusBean bean=new EventBusBean();
@@ -199,24 +195,24 @@ public class HomeActivity extends BaseAcitvity {
      *
      * @param uri
      */
-    public void startPhotoZoom(Uri uri) {
-        File file = FileUtils.buildFile(
-                AppUtils.getPath(this, AppUtils.StorageFile.cache) + String.valueOf(System.currentTimeMillis() / 1000) + ".jpg", false);
-        path = file.getPath();
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.setDataAndType(uri, "image/*");
-        intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 250);
-        intent.putExtra("outputY", 250);
-//        intent.putExtra("output", Uri.fromFile(new File(path)));
-//        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
-        intent.putExtra("outputFormat", "JPEG");
-        intent.putExtra("noFaceDetection", true);// ȡ������ʶ��
-        intent.putExtra("return-data", true);// true:������uri��false������uri
-        startActivityForResult(intent, CROP_CODE);
-    }
+//    public void startPhotoZoom(Uri uri) {
+//        File file = FileUtils.buildFile(
+//                AppUtils.getPath(this, AppUtils.StorageFile.cache) + String.valueOf(System.currentTimeMillis() / 1000) + ".jpg", false);
+//        path = file.getPath();
+//        Intent intent = new Intent("com.android.camera.action.CROP");
+//        intent.setDataAndType(uri, "image/*");
+//        intent.putExtra("crop", "true");
+//        intent.putExtra("aspectX", 1);
+//        intent.putExtra("aspectY", 1);
+//        intent.putExtra("outputX", 250);
+//        intent.putExtra("outputY", 250);
+////        intent.putExtra("output", Uri.fromFile(new File(path)));
+////        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+//        intent.putExtra("outputFormat", "JPEG");
+//        intent.putExtra("noFaceDetection", true);// ȡ������ʶ��
+//        intent.putExtra("return-data", true);// true:������uri��false������uri
+//        startActivityForResult(intent, CROP_CODE);
+//    }
 
     /**
      * 选择的图片加入到集合

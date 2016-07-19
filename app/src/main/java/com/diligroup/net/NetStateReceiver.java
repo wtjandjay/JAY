@@ -27,7 +27,7 @@ import com.diligroup.utils.NetUtils;
 import java.util.ArrayList;
 
 /**
-*
+ *by Kevin
  */
 public class NetStateReceiver extends BroadcastReceiver {
 

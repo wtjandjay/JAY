@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.diligroup.Home.AddLunchActivity">
+
+    <include layout="@layout/comm_title"
+        android:id="@+id/common_title_root"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.diligroup.view.PagerSlidingTabStrip
+        android:id="@+id/pst_tabstrip"
+        android:layout_below="@id/common_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:pstsIndicatorColor="@color/common_green"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsUnderlineColor="@color/common_backgroud"
+        app:pstsUnderlineHeight="1dp"
+        app:pstsShouldExpand="true"
+        android:background="@color/white"></com.diligroup.view.PagerSlidingTabStrip>
+</LinearLayout>
+    <include layout="@layout/line_view"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+</LinearLayout>

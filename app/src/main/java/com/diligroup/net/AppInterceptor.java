@@ -11,7 +11,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by chwj on 2016/3/6.
  *
  * 请求拦截器
  */

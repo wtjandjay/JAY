@@ -12,4 +12,6 @@ public class Urls {
 
     /*获取验证码*/
     public static String SMSCODE = HOST + "/dis/prepose.action";
+    /*修改密码*/
+    public static String MODIFYPSD=HOST+"/dis/prepose.action";
 }

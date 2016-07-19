@@ -9,7 +9,7 @@
         layout="@layout/comm_title"
         />
 <include
-    layout="@layout/title_info"/>
+    layout="s@layout/title_info"/>
 
     <com.diligroup.view.WheelView
         android:layout_marginTop="10dp"

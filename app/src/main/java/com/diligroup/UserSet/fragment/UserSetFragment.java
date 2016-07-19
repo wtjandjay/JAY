@@ -64,11 +64,11 @@ public class UserSetFragment extends BaseFragment implements View.OnClickListene
     @OnClick(R.id.rl_go_setting)
     public void jumpSetView() {
         GoActivity(SettingActivity.class);
-
     }
 
     @OnClick(R.id.rl_go_service)
     public void jumpService() {
+
         GoActivity(SettingActivity.class);
     }
 
@@ -85,9 +85,9 @@ public class UserSetFragment extends BaseFragment implements View.OnClickListene
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN // Permission was added in API Level 16
                 && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
-            new CommonUtils(getActivity()).requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE,
-                    getString(R.string.permission_rationale),
-                    REQUEST_STORAGE_READ_ACCESS_PERMISSION);
+//            new CommonUtils(getActivity()).requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE,
+//                    getString(R.string.permission_rationale),
+//                    REQUEST_STORAGE_READ_ACCESS_PERMISSION);
         } else {
             int maxNum = 12;
             MultiImageSelector selector = MultiImageSelector.create(getActivity());

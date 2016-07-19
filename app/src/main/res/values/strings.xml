@@ -5,29 +5,18 @@
     <string name="before">餐前指导</string>
     <string name="home">首页</string>
     <string name="action_sign_in">登录</string>
-    <string-array name="gulei">
-        　
-        <item>小麦</item>
-        　　
-        <item>大麦</item>
-        　　
-        <item>荞麦</item>
-        　　
-        <item>玉米</item>
-    </string-array>
-    <string-array name="doulei">
-        　
-        <item>红豆</item>
-        　　
-        <item>绿豆</item>
-        　　
-        <item>黄豆</item>
-        　　
-        <item>豌豆</item>
-    </string-array>
+    <!--<string-array name="gulei">-->
+        <!--　	<item>小麦</item>-->
+        <!--　　<item>大麦</item>-->
+        <!--　　<item>荞麦</item>-->
+        <!--　　<item>玉米</item>-->
+    <!--</string-array>-->
+
     <string name="error_no_permission">无权限</string>
     <string name="permission_dialog_title">权限拒绝</string>
     <string name="permission_dialog_ok">好</string>
     <string name="permission_dialog_cancel">拒绝</string>
     <string name="permission_rationale">浏览图片需要您提供浏览存储的权限</string>
+    <string name="store_supply">门店供应</string>
+    <string name="custoom">自定义</string>
 </resources>

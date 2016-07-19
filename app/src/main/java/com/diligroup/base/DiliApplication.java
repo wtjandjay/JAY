@@ -3,8 +3,8 @@ package com.diligroup.base;
 import android.app.Application;
 import android.content.Context;
 
-import com.diligroup.other.LocationService;
 import com.baidu.mapapi.SDKInitializer;
+import com.diligroup.other.LocationService;
 import com.umeng.socialize.PlatformConfig;
 
 /**
@@ -25,6 +25,8 @@ public class DiliApplication extends Application {
         PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad");
         // QQ和Qzone appid appkey
         PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
+
+        CrashHandler.getInstance().setCustomCrashInfo(this);
     }
     public static Context getContext() {
         return instance;

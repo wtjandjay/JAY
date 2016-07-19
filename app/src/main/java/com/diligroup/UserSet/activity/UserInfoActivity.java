@@ -1,19 +1,33 @@
 package com.diligroup.UserSet.activity;
 
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.TextView;
+
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
+import com.diligroup.utils.UpLoadPhotoUtils;
+import com.diligroup.view.CircleImageView;
 
+import java.io.File;
+import java.util.ArrayList;
+
+import butterknife.Bind;
 import butterknife.OnClick;
+import me.nereo.multi_image_selector.MultiImageSelector;
 
 /**
  * Created by Kevin on 2016/6/14.
  * 用户信息详情
  */
 public class UserInfoActivity extends BaseAcitvity {
-//    @Bind(R.id.rl_sex)
+    //    @Bind(R.id.rl_sex)
 //    RelativeLayout rl_sex;
 //    @Bind(R.id.rl_birthday)
 //    RelativeLayout rl_birthday;
@@ -35,7 +49,13 @@ public class UserInfoActivity extends BaseAcitvity {
 //    RelativeLayout rl_weight;
 //    @Bind(R.id.rl_where)
 //    RelativeLayout rl_where;
-
+    @Bind(R.id.tv_time_of_month)
+    TextView tv_time_of_month;
+    @Bind(R.id.user_icon)
+   CircleImageView userIcon;
+    private ArrayList<String> mSelectPath;
+    private static final int REQUEST_IMAGE = 2;
+    private static final int CROP_CODE = 3;
     @Override
     protected void onStart() {
         super.onStart();
@@ -79,13 +99,13 @@ public class UserInfoActivity extends BaseAcitvity {
 
     @OnClick(R.id.rl_sex)
     public void ClickSex() {
-        ToastUtil.showShort(this,"ReportSex");
-        readyGo( ReportSex.class);
+        ToastUtil.showShort(this, "ReportSex");
+        readyGo(ReportSex.class);
     }
 
     @OnClick(R.id.rl_birthday)
     public void ClickBirthday() {
-        readyGo( ReportBirthday.class);
+        readyGo(ReportBirthday.class);
     }
 
     @OnClick(R.id.rl_height)
@@ -120,16 +140,62 @@ public class UserInfoActivity extends BaseAcitvity {
 
     @OnClick(R.id.rl_noeat)
     public void ClickYsjj() {
-        readyGo( ReportNoeat.class);
+        readyGo(ReportNoeat.class);
     }
 
     @OnClick(R.id.rl_work)
     public void ClickWork() {
         readyGo(ReportWork.class);
     }
+
     @OnClick(R.id.rl_allergy)
-    public void ClickAllergy(){
+    public void ClickAllergy() {
         readyGo(ReportAllergy.class);
+    }
+
+    @OnClick(R.id.rl_time_of_month)//生理期
+    public void ClickCalendar() {
+        readyGoForResult(PhysiologicalPeriodActivity.class, 10);
+    }
+    @OnClick(R.id.user_icon)
+    public void ChangeHeadPhoto() {
+       new UpLoadPhotoUtils(this).pickImage();
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 10:
+                ArrayList<String> selectDate = (ArrayList<String>) data.getSerializableExtra("cycle");
+                if(selectDate.size()>1) {
+                    tv_time_of_month.setText(selectDate.get(0) + "--" + selectDate.get(1));
+                }
+                break;
+
+            case REQUEST_IMAGE:
+                if (resultCode == RESULT_OK) {
+                    mSelectPath = data.getStringArrayListExtra(MultiImageSelector.EXTRA_RESULT);
+                    StringBuilder sb = new StringBuilder();
+                    for (String p : mSelectPath) {
+                        sb.append(p);
+                    }
+                    LogUtils.i("onActivityResult方法=", sb.toString());
+                    new UpLoadPhotoUtils(this).startPhotoZoom(Uri.fromFile(new File(sb.toString())));
+                }
+                break;
+            case CROP_CODE:
+                if (resultCode == RESULT_OK) {
+//                    detialPathAndShowImage();  上传图片
+                    Bundle extras = data.getExtras();
+                    if (extras != null) {
+                        Bitmap photo = extras.getParcelable("data");
+                        userIcon.setImageBitmap(photo);
+                    }
+                } else {
+                    finish();
+                }
+                break;
+        }
     }
 
 }

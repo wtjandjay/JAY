@@ -35,9 +35,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-/**
- * Created by user on 2016/3/4.
- */
 public class RequestManager {
 
     private static RequestManager mInstance;

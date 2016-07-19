@@ -11,8 +11,9 @@ public enum Action {
     /*注册*/
     REGISTER(Urls.REGISTER),
     /*获取验证码*/
-    SMSCODE(Urls.SMSCODE),;
-
+    SMSCODE(Urls.SMSCODE),
+/*修改密码*/
+    MODIFY(Urls.MODIFYPSD);
     /**
      * 根据Action获取解析类
      * @param action
@@ -25,6 +26,8 @@ public enum Action {
             case REGISTER:
                 return CommonBean.class;
             case SMSCODE:
+                return CommonBean.class;
+            case MODIFY:
                 return CommonBean.class;
         }
         return null;

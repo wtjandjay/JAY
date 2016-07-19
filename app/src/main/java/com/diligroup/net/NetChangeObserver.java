@@ -19,7 +19,7 @@ package com.diligroup.net;
 import com.diligroup.utils.NetUtils;
 
 /**
- *
+ *by Kevin
  */
 public class NetChangeObserver {
 

@@ -10,6 +10,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
+ * 上报特殊人群
  * Created by Kevin on 2016/6/20.
  */
 public class ReportSpecial extends BaseAcitvity {

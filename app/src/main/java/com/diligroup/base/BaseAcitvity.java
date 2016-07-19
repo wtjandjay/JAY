@@ -16,17 +16,16 @@ import com.diligroup.net.NetChangeObserver;
 import com.diligroup.net.NetStateReceiver;
 import com.diligroup.utils.NetUtils;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
  * Created by Kevin on 2016/6/14.
  */
 public abstract class BaseAcitvity extends AppCompatActivity {
-    @Bind(R.id.comm_title)
+//    @Bind(R.id.comm_title)
     public   TextView tv_title;
-    Context mContext = null;
-    @Bind(R.id.iv_back)
+//    Context mContext = null;
+//    @Bind(R.id.iv_back)
     public ImageView iv_back;
 
     public TextView title_infos;
@@ -42,31 +41,6 @@ public abstract class BaseAcitvity extends AppCompatActivity {
      */
     protected abstract void onNetworkDisConnected();
 
-    /**
-     * startActivityForResult
-     *
-     * @param clazz
-     * @param requestCode
-     */
-    protected void readyGoForResult(Class<?> clazz, int requestCode) {
-        Intent intent = new Intent(this, clazz);
-        startActivityForResult(intent, requestCode);
-    }
-
-    /**
-     * startActivityForResult with bundle
-     *
-     * @param clazz
-     * @param requestCode
-     * @param bundle
-     */
-    protected void readyGoForResult(Class<?> clazz, int requestCode, Bundle bundle) {
-        Intent intent = new Intent(this, clazz);
-        if (null != bundle) {
-            intent.putExtras(bundle);
-        }
-        startActivityForResult(intent, requestCode);
-    }
 
     /**
      * 联网状态
@@ -112,29 +86,20 @@ public abstract class BaseAcitvity extends AppCompatActivity {
         tv_title = ButterKnife.findById(this, R.id.comm_title);
         title_infos= ButterKnife.findById(this, R.id.tv_title_info);
         iv_back  = ButterKnife.findById(this,R.id.iv_back);
-        if (tv_title!=null){
-            setTitle();
-        }
-        if (title_infos!=null){
+        if (tv_title!=null|title_infos!=null){
             setTitle();
         }
         if (iv_back!=null){
-
-           isShowBack(false);
+            isShowBack(false);
         }
    }
 
 
 
     public void setTitle() {
-//        tv_title.setText("");
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-      //  AppManager.getAppManager().finishActivity();
-    }
+
     public void isShowBack(Boolean  isShow ) {
         if (isShow){
         iv_back.setVisibility(View.VISIBLE);
@@ -151,7 +116,6 @@ public abstract class BaseAcitvity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-    //    AppManager.getAppManager().finishActivity(this);
         NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
         NetStateReceiver.unRegisterNetworkStateReceiver(this);
     }
@@ -200,28 +164,30 @@ public abstract class BaseAcitvity extends AppCompatActivity {
         Intent intent = new Intent(this, clazz);
         startActivity(intent);
     }
-//    private static Boolean isQuit = false;
-//    Timer timer = new Timer();
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            if (!isQuit) {
-//                isQuit = true;
-//                Toast.makeText(getBaseContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
-//                TimerTask task = null;
-//                task = new TimerTask() {
-//                    @Override
-//                    public void run() {
-//                        isQuit = false;
-//                    }
-//                };
-//                timer.schedule(task, 2000);
-//            } else {
-//                finish();
-//                System.exit(0);
-//            }
-//        }
-//        return false;
-//
-//    }
+    /**
+     * startActivityForResult
+     *
+     * @param clazz
+     * @param requestCode
+     */
+    protected void readyGoForResult(Class<?> clazz, int requestCode) {
+        Intent intent = new Intent(this, clazz);
+        startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * startActivityForResult with bundle
+     *
+     * @param clazz
+     * @param requestCode
+     * @param bundle
+     */
+    protected void readyGoForResult(Class<?> clazz, int requestCode, Bundle bundle) {
+        Intent intent = new Intent(this, clazz);
+        if (null != bundle) {
+            intent.putExtras(bundle);
+        }
+        startActivityForResult(intent, requestCode);
+    }
+
 }

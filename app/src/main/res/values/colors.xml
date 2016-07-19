@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="title_color">#67A128</color>
+    <color name="title_color">#67A129</color>
+    <color name="common_green">#67A129</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
@@ -163,4 +164,13 @@
     <color name="darkblue">#00008B</color><!--暗蓝色 -->
     <color name="navy">#000080</color><!--海军色 -->
     <color name="black">#000000</color><!--黑色 -->
+
+
+    <color name="black1">#333333</color><!--黑色 -->
+    <color name="line_view">#dddddd</color><!--黑色 -->
+    <color name="graycolor">#999999</color>
+    <color name="calendar_gray_color">#dddddd</color>
+    <color name="common_backgroud">#f0f0f0</color>
+    <color name="common_red">#ff0000</color>
+
 </resources>

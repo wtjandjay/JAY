@@ -88,12 +88,12 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
         }
 
     }
-
+/* 去注册*/
     @OnClick(R.id.bt_regist)
     public void doRegist() {
         readyGo(RegistActivity.class);
     }
-
+/* 忘记密码*/
     @OnClick(R.id.tv_forget)
     public void forgetPsd() {
         readyGo(FindPsdActivity.class);
@@ -118,8 +118,8 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
                 ToastUtil.showShort(this, "密码不正确");
                 return;
             }
-            if (bean.getCode().equals("APP_C010005")){
-                ToastUtil.showShort(this, "手机号没有注册");
+            if (bean.getCode().equals("APP_C010001")){
+                ToastUtil.showShort(this, "密码不正确");
 
             }
 

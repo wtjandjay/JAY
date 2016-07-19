@@ -8,7 +8,7 @@ import com.baidu.location.LocationClientOption;
 
 /**
  *
- * @author baidu
+ * @author kevin
  *
  */
 public class LocationService {

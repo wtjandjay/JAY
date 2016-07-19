@@ -7,6 +7,6 @@ public class TransCode {
     public static String LoginCode = "C0100";
     public static String RegistCode = "C0100";
     public static String SMSCode = "M0053";
-
+    public static String ModifyCode="";
 
 }

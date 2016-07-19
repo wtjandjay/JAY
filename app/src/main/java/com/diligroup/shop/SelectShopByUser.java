@@ -4,6 +4,8 @@ import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.utils.NetUtils;
 
+import butterknife.OnClick;
+
 /**
  * 用户手动 选择 门店地址
  * Created by Kevin on 2016/7/11.
@@ -33,6 +35,10 @@ public class SelectShopByUser extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
+        isShowBack(true);
+    }
+    @OnClick(R.id.bt_report_shop)
+    public void reportShop(){
 
     }
 }

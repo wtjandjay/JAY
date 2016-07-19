@@ -2,12 +2,10 @@ package com.diligroup.UserSet.calendar;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.Spanned;
-import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,7 +36,7 @@ public class CalendarAdapter extends BaseAdapter {
 	private SpecialCalendar sc = null;
 	private LunarCalendar lc = null;
 	private Resources res = null;
-	private Drawable drawable = null;
+//	private Drawable drawable = null;
 
 	private String currentYear = "";
 	private String currentMonth = "";
@@ -151,27 +149,34 @@ public class CalendarAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = LayoutInflater.from(context).inflate(R.layout.calendar_item, null);
 		}
+//		convertView.setLayoutParams(new GridView.LayoutParams((CommonUtils.getScreenWidth(context)-28)/7, CommonUtils.getScreenHeight(context)*13/32/7));
+
+		Typeface typeFace = Typeface.createFromAsset(context.getAssets(),"fonts/FZLTCXHJW.TTF");
 		TextView textView = (TextView) convertView.findViewById(R.id.tvtext);
 		String d = dayNumber[position].split("\\.")[0];
 		String dv = dayNumber[position].split("\\.")[1];
 
 		SpannableString sp = new SpannableString(d);
 //		SpannableString sp = new SpannableString(d + "\n" + dv);
-		sp.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-		sp.setSpan(new RelativeSizeSpan(1.2f), 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		sp.setSpan(new StyleSpan(Typeface.NORMAL), 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//		sp.setSpan(new RelativeSizeSpan(1.2f), 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 //		if (dv != null || dv != "") {
 //			sp.setSpan(new RelativeSizeSpan(0.75f), d.length() + 1, dayNumber[position].length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 //		}去除农历显示，角标越界异常
 		// sp.setSpan(new ForegroundColorSpan(Color.MAGENTA), 14, 16,
 		// Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 		textView.setText(sp);
-		textView.setTextColor(Color.GRAY);
+		textView.setTypeface(typeFace);
+		textView.setTextColor(context.getResources().getColor(R.color.calendar_gray_color));
 
 		if (position < daysOfMonth + dayOfWeek && position >= dayOfWeek) {
+			// 应用字体
+			textView.setTypeface(typeFace);
+
 			// 当前月信息显示
-			textView.setTextColor(Color.BLACK);// 当月字体设黑
+			textView.setTextColor(context.getResources().getColor(R.color.black1));// 当月字体设黑
 //			drawable = res.getDrawable(R.drawable.calendar_item_selected_bg);
-			drawable = new ColorDrawable(Color.rgb(23, 126, 214));
+//			drawable = new ColorDrawable(Color.rgb(23, 126, 214));
 //			if (position % 7 == 0 || position % 7 == 6) {
 //				// 当前月信息显示
 //				textView.setTextColor(Color.rgb(23, 126, 214));// 当月字体设黑
@@ -180,13 +185,13 @@ public class CalendarAdapter extends BaseAdapter {
 //			}
 		}
 
-//		if (currentFlag == position) {
-//			// 设置当天的背景
-////			drawable = res.getDrawable(R.drawable.calendar_item_selected_bg);
+		if (currentFlag == position) {
+			// 设置当天的背景
+		Drawable drawable = res.getDrawable(R.drawable.circle_red);
 //			drawable = new ColorDrawable(Color.rgb(23, 126, 214));
-//			textView.setBackgroundDrawable(drawable);
-//			textView.setTextColor(Color.WHITE);
-//		}
+			textView.setBackgroundDrawable(drawable);
+			textView.setTextColor(context.getResources().getColor(R.color.white));
+		}
 		return convertView;
 	}
 
