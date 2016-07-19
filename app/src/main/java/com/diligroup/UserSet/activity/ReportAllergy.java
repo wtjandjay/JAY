@@ -94,6 +94,7 @@ public class ReportAllergy extends BaseAcitvity {
                 tv.setText(o.toString());
                 return tv;
             }
+
             @Override
             public void setSelectedList(Set set) {
                 super.setSelectedList(set);
@@ -141,13 +142,13 @@ public class ReportAllergy extends BaseAcitvity {
             holder.food_Check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked){
-                        ToastUtil.showShort(ReportAllergy.this,foodCount[position]);
-//                        list_selected.remove
+                    if (isChecked) {
+                        ToastUtil.showShort(ReportAllergy.this, foodCount[position]);
+                        list_selected.add(foodCount[position]);
                     }
-                    if (!isChecked){
-                        ToastUtil.showShort(ReportAllergy.this,"你删除了"+foodCount[position]);
-
+                    if (!isChecked) {
+                        ToastUtil.showShort(ReportAllergy.this, "你删除了" + foodCount[position]);
+                        list_selected.remove(foodCount[position]);
                     }
                 }
             });

@@ -74,6 +74,7 @@ public class HomeActivity extends BaseAcitvity {
     }
     @Override
     protected void initViewAndData() {
+        isShowBack(false);
         mViewPager.setOffscreenPageLimit(4);
         setupViewPager(mViewPager);
 
