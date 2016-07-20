@@ -47,20 +47,25 @@ public class Api {
      *  找回密码的验证码
      * @param phoneNum
      */
-    public static void getCode(String phoneNum, RequestManager.ResultCallback callback) {
+    public static void getCode(String phoneNum, String codeTpye,RequestManager.ResultCallback callback) {
         Map<String, String> map = new HashMap<>();
         map.put("transCode", TransCode.SMSCode);
         map.put("type", "sendPhoneMes");
         map.put("mobileNum", phoneNum);
         map.put("mesType","1");
-        map.put("bizType","2");
+        map.put("bizType",codeTpye);
         RequestManager.getInstance().getAsync(Action.SMSCODE,map,callback);
     }
     /**
      * 修改密码
      *
      */
-    public static void modifyPsd(){
-
+    public static void modifyPsd(String phoneNum, String newPsd, RequestManager.ResultCallback callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.ModifyCode);
+        map.put("type", "app_uPassword");
+        map.put("mobileNum", phoneNum);
+        map.put("newPassword",newPsd);
+        RequestManager.getInstance().getAsync(Action.MODIFY,map,callback);
     }
 }

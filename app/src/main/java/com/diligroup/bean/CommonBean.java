@@ -1,9 +1,11 @@
 package com.diligroup.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by hjf on 2016/7/13.
  */
-public class CommonBean {
+public class CommonBean  implements Serializable{
 
     /**
      * code : APP_C010005

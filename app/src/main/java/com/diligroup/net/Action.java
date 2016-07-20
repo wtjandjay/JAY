@@ -1,6 +1,7 @@
 package com.diligroup.net;
 
 import com.diligroup.bean.CommonBean;
+import com.diligroup.bean.ProvingCodeBean;
 
 /**
  * Created by cwj on 2016/4/5.
@@ -26,7 +27,7 @@ public enum Action {
             case REGISTER:
                 return CommonBean.class;
             case SMSCODE:
-                return CommonBean.class;
+                return ProvingCodeBean.class;
             case MODIFY:
                 return CommonBean.class;
         }

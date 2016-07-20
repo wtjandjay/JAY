@@ -443,7 +443,7 @@ public class RequestManager {
         builder.append("code: " + code + "\n");
         builder.append("message: " + message + "\n");
         builder.append("body: " + body + "\n");
-        LogUtils.d(RequestManager.class.getSimpleName(), builder.toString());
+        LogUtils.e(RequestManager.class.getSimpleName(), builder.toString());
     }
     /**
      * 主线程中回调数据

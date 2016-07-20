@@ -44,7 +44,6 @@ public class DigestUtils {
      */
     public static String stringMD5(String pw) {
         try {
-
             // 拿到一个MD5转换器（如果想要SHA1参数换成”SHA1”）
             MessageDigest messageDigest =MessageDigest.getInstance("MD5");
             // 输入的字符串转换成字节数组

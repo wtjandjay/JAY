@@ -12,6 +12,7 @@ import com.diligroup.bean.CommonBean;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
 import com.diligroup.net.RequestManager;
+import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.StringUtils;
@@ -52,21 +53,10 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
     protected void onNetworkDisConnected() {
 
     }
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
-//        ButterKnife.bind(this);
-//        tv_title.setText("登录");
-//    }
-
     @Override
     protected void initViewAndData() {
         tv_title.setText("登录");
     }
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -79,7 +69,7 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
         String passdWord = et_password.getText().toString();
         if (!TextUtils.isEmpty(phoneNum) && StringUtils.isMobileNumber(phoneNum)) {
             if (!TextUtils.isEmpty(passdWord)) {
-                Api.login(phoneNum, passdWord, this);
+                Api.login(phoneNum, DigestUtils.stringMD5(passdWord), this);
             } else {
                 ToastUtil.showShort(this, "密码不能为空");
             }
@@ -96,7 +86,7 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
 /* 忘记密码*/
     @OnClick(R.id.tv_forget)
     public void forgetPsd() {
-        readyGo(FindPsdActivity.class);
+        readyGo(ModifyPSDActivity.class);
     }
 
     @Override
@@ -106,7 +96,7 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
 
     @Override
     public void onResponse(Request request, Action action, Object object) {
-        if (object != null) {
+        if (object != null&& action==Action.LOGIN) {
             CommonBean bean = (CommonBean) object;
             LogUtils.e(bean.getCode() + "----------" + bean.getMessage());
             if (bean.getCode().equals("000000")) {

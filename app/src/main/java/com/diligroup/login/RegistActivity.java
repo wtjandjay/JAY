@@ -1,14 +1,17 @@
 package com.diligroup.login;
 
 
+import android.text.TextUtils;
 import android.widget.EditText;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.CommonBean;
+import com.diligroup.bean.ProvingCodeBean;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
 import com.diligroup.net.RequestManager;
+import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.StringUtils;
@@ -23,17 +26,17 @@ import okhttp3.Request;
  * 注册
  */
 public class RegistActivity extends BaseAcitvity implements RequestManager.ResultCallback {
-    String phoneNum;
-    String registCode;
-    String psd;
+
     @Bind(R.id.input_phone)
     EditText et_phone;
     @Bind(R.id.et_code)
     EditText et_code;
     @Bind(R.id.et_psd)
-
     EditText et_psd;
-
+    String smsCode;
+    String phoneNum;
+    String registCode;
+    String psd;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_regist;
@@ -65,6 +68,11 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
     @OnClick(R.id.bt_getcode)
     public void getRegistCode() {
         phoneNum = et_phone.getText().toString();
+        if (TextUtils.isEmpty(phoneNum)&&StringUtils.isMobileNumber(phoneNum)){
+            Api.getCode(phoneNum,"1",this);
+        }else{
+            ToastUtil.showShort(this,"请检查手机号码");
+        }
     }
 
     @OnClick(R.id.bt_regist2)
@@ -73,18 +81,21 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
         registCode = et_code.getText().toString();
         psd = et_psd.getText().toString();
         if (phoneNum != null && !phoneNum.isEmpty() && StringUtils.isMobileNumber(phoneNum)) {
-            if (registCode != null && !registCode.isEmpty()) {
-                if (psd != null && !psd.isEmpty()) {
-                    Api.register("C0100", "add", phoneNum, psd, this);
-                } else {
-                    ToastUtil.showShort(this, "请输入密码");
-
+            if (registCode != null && !registCode.isEmpty()&&!smsCode.isEmpty()) {
+                if (registCode.equals(smsCode)){
+                    if (psd != null && !psd.isEmpty()) {
+                        Api.register("C0100", "add", phoneNum, DigestUtils.stringMD5(psd), this);
+                    } else {
+                        ToastUtil.showShort(this, "请输入密码");
+                    }
+                }else{
+                    ToastUtil.showShort(RegistActivity.this,"验证码不正确");
                 }
+
             } else {
                 ToastUtil.showShort(this, "请输入验证码");
-
             }
-            return;
+
 
         } else {
             ToastUtil.showShort(this, "请输入正确的手机号码");
@@ -100,22 +111,33 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
 
     @Override
     public void onResponse(Request request, Action action, Object object) {
-        if (object != null) {
-            CommonBean bean = (CommonBean) object;
-            //APP_C010002  已经注册
-            //000000  注册成功
-            LogUtils.e(bean.getMessage());
-            if (bean.getCode().equals("000000")) {
-                ToastUtil.showShort(this, "注册成功");
-                readyGo(LoginActivity.class);
-                return;
+        if (object!=null){
+            switch (action){
+                case REGISTER:
+                    CommonBean registBean = (CommonBean) object;
+                    if (registBean.getCode().equals("000000")) {
+                        ToastUtil.showShort(this, "注册成功");
+                        readyGo(LoginActivity.class);
+                        return;
+                    }
+                    if (registBean.getCode().equals("APP_C010002")) {
+                        ToastUtil.showShort(this, "此号码已经注册请直接登录");
+                        return;
+                    }
+                    break;
+                case SMSCODE:
+                    ProvingCodeBean  smsBean= (ProvingCodeBean) object;
+                    if (smsBean.getCode().equals("000000")){
+                        smsCode=smsBean.sendResponse.getSmsCode();
+                        LogUtils.d("smsCode======"+smsCode);
+                        break;
+                    }
+
             }
-            if (bean.getCode().equals("APP_C010002")) {
-                ToastUtil.showShort(this, "此号码已经注册请直接登录");
-                return;
-            }
-            return;
+        }else{
+            ToastUtil.showShort(this, "服务器出问题了 返回 NULL");
+
         }
-        ToastUtil.showShort(this, "服务器出问题了 返回 NULL");
+
     }
 }

@@ -32,17 +32,13 @@
             android:text="音效"
             android:textSize="15sp" />
 
-        <ToggleButton
-            android:layout_marginEnd="10dp"
-            android:id="@+id/tb_switch"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:checked="true"
-            android:text=""
-            android:textOff=""
-            android:textOn="" />
+       <Switch
+           android:layout_marginEnd="10dp"
+           android:layout_width="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_alignParentEnd="true"
+           android:checked="true"
+           android:layout_height="wrap_content" />
 
     </RelativeLayout>
 
