@@ -40,7 +40,6 @@
 
     <GridView
         android:id="@+id/gv_light"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"

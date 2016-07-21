@@ -15,9 +15,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -25,7 +27,7 @@ import android.widget.ViewFlipper;
 import com.diligroup.R;
 import com.diligroup.UserSet.calendar.CalendarAdapter;
 import com.diligroup.base.BaseAcitvity;
-import com.diligroup.utils.CommonUtils;
+import com.diligroup.utils.DateUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
@@ -78,6 +80,10 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
     TextView friday;
     @Bind(R.id.saturday)
     TextView saturday;
+    @Bind(R.id.physiological_layout)
+    RelativeLayout physiological_layout;//日历选择需要gone掉的头布局
+    @Bind(R.id.gone_fl)
+    FrameLayout gone_fl;
     private int year_c = 0;
     private int month_c = 0;
     private int day_c = 0;
@@ -96,8 +102,9 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
 
     HashMap<String, View> tempList = new HashMap<>();
     ArrayList<String> selectDate = new ArrayList<>();
-    Intent mIntent = new Intent();
+    Intent mIntent;
     private Typeface typeFace;
+    private boolean isFromHome;//
 
     @Override
     public void setTitle() {
@@ -125,11 +132,19 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
     @Override
     protected void initViewAndData() {
         ButterKnife.bind(this);
+        isFromHome = getIntent().getBooleanExtra("isFromHome",false);
         setViews();
         setListeners();
     }
 
     private void setViews() {
+        if(isFromHome){
+            physiological_layout.setVisibility(View.GONE);
+            gone_fl.setVisibility(View.GONE);
+            nextStep.setVisibility(View.GONE);
+            say_latter.setVisibility(View.GONE);
+        }
+
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-d");
         currentDate = sdf.format(date); // 当期日期
@@ -175,6 +190,7 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
                 enterPrevMonth(gvFlag);
                 break;
             case R.id.nextstep:
+               mIntent = new Intent();
                 mIntent.putExtra("cycle", selectDate);
                 setResult(10, mIntent);
                 this.finish();
@@ -247,15 +263,14 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
         Display display = windowManager.getDefaultDisplay();
         int width = display.getWidth();
         int height = display.getHeight();
-        // params.height = height * 13 / 32;
 
         gridView = new GridView(this);
         gridView.setNumColumns(7);
 //        gridView.setColumnWidth(47);
          gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
-//        if (width == 720 && height == 1280) {
-//            gridView.setColumnWidth(40);
-//        }
+        if (width == 720 && height == 1280) {
+            gridView.setColumnWidth(40);
+        }
         gridView.setGravity(Gravity.CENTER_VERTICAL);
         gridView.setSelector(new ColorDrawable(Color.TRANSPARENT));
         // 去除gridView边框
@@ -291,9 +306,19 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
 //                }
 
                 String str = getItemClickDate(position);
+                if(str==null){//invalidate date
+                    return;
+                }
+                if(isFromHome){
+                    mIntent=new Intent();
+                    mIntent.putExtra("current",getItemClickDate(position));
+                    setResult(20,mIntent);
+                    finish();
+                }
                 if (tempList.size() == 0) {
                     tempList.put(getItemClickDate(position), arg1);//日期作为键 对应的view作为值放在map中
                     arg1.setTag("red");//
+
                     selectDate.add(getItemClickDate(position));
                     arg1.findViewById(R.id.tvtext).setBackgroundResource(R.drawable.circle_red);
                     ((TextView) arg1.findViewById(R.id.tvtext)).setTextColor(getResources().getColor(R.color.white));
@@ -308,7 +333,7 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
 
                     }
                 } else if (tempList.size() == 2) {//需要判断距离哪一个日期近，然后替换哪一个日期
-                    String nearDate = CommonUtils.compare_date(selectDate.get(0), selectDate.get(1), getItemClickDate(position));
+                    String nearDate = DateUtils.compare_date(selectDate.get(0), selectDate.get(1), getItemClickDate(position));
                     String removeDate = selectDate.remove(selectDate.get(0).equals(nearDate) ? 0 : 1);//删除的日期
                     selectDate.add(getItemClickDate(position));
                     //把相近日期背景色还原，新选择日期背景色加重显示
@@ -332,8 +357,9 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
 
             }
         });
-        params.setMargins(30, 0, 30, 0);
-        gridView.setGravity(Gravity.CENTER_HORIZONTAL);
+//        params.setMargins(30, 0, 30, 0);
+//        gridView.setGravity(Gravi
+// ty.CENTER_HORIZONTAL);
         gridView.setLayoutParams(params);
     }
 

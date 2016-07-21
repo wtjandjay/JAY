@@ -22,12 +22,6 @@ import butterknife.OnClick;
  */
 public class ReportWork extends BaseAcitvity  {
 
-    //    @Bind(R.id.id_flowlayout)
-//    TagFlowLayout tag_layout1;
-//    @Bind(R.id.id_flowlayout2)
-//    TagFlowLayout tag_layout2;
-//    @Bind(R.id.id_flowlayout3)
-//    TagFlowLayout tag_layout3;
     private String[] lightWork;
     private String[] middleWork;
     private String[] heavyWork;

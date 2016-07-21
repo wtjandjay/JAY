@@ -24,6 +24,8 @@
             android:background="#DCDCDC" />
 
         <LinearLayout
+            android:clickable="true"
+            android:id="@+id/ll_boy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -47,6 +49,8 @@
 
 
         <LinearLayout
+            android:clickable="true"
+            android:id="@+id/ll_girl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

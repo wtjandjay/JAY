@@ -13,6 +13,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="53.3dp"
+        android:id="@+id/physiological_layout"
         android:background="@color/common_backgroud">
         <TextView
             android:id="@+id/cycle_title_info"
@@ -150,6 +151,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/gone_fl"
         android:background="@color/white">
     <LinearLayout
         android:layout_width="wrap_content"

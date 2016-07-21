@@ -377,6 +377,7 @@ public class RequestManager {
                 debugFailure(call, e);
             }
 
+            @SuppressWarnings("ConstantConditions")
             @Override
             public void onResponse(Call call, Response response) {
                 boolean cache = getCacheTag(call);

@@ -22,7 +22,7 @@ public class Api {
         map.put("transCode", TransCode.LoginCode);
         map.put("type", "app_login");
         map.put("mobileNum", mobileNum);
-        map.put("password", DigestUtils.stringMD5(password));
+        map.put("password", password);
         RequestManager.getInstance().postAsync(Action.LOGIN, map, callback);
     }
 
@@ -33,10 +33,10 @@ public class Api {
      *
      * @param callback
      */
-    public static void register(String transCode, String type, String mobileNum, String password, RequestManager.ResultCallback callback) {
+    public static void register(String mobileNum, String password, RequestManager.ResultCallback callback) {
         Map<String, String> map = new HashMap<>();
-        map.put("transCode", transCode);
-        map.put("type", type);
+        map.put("transCode", TransCode.RegistCode);
+        map.put("type", "add");
         map.put("mobileNum", mobileNum);
         map.put("password", password);
         RequestManager.getInstance().getAsync(Action.REGISTER, map, callback);
@@ -58,7 +58,6 @@ public class Api {
     }
     /**
      * 修改密码
-     *
      */
     public static void modifyPsd(String phoneNum, String newPsd, RequestManager.ResultCallback callback){
         Map<String, String> map = new HashMap<>();
@@ -67,5 +66,15 @@ public class Api {
         map.put("mobileNum", phoneNum);
         map.put("newPassword",newPsd);
         RequestManager.getInstance().getAsync(Action.MODIFY,map,callback);
+    }
+    /**
+     * 退出登陆
+     */
+    public static void loginOut(String phoneNum, RequestManager.ResultCallback callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.LoginOut);
+        map.put("type", "app_logOut");
+        map.put("mobileNum", phoneNum);
+        RequestManager.getInstance().getAsync(Action.LOGINOUT,map,callback);
     }
 }

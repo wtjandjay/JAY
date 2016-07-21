@@ -14,4 +14,6 @@ public class Urls {
     public static String SMSCODE = HOST + "/dis/prepose.action";
     /*修改密码*/
     public static String MODIFYPSD=HOST+"/dis/prepose.action";
+    public static String LOGINOUT=HOST+"/dis/prepose.action";
+
 }

@@ -7,6 +7,7 @@ import android.widget.ProgressBar;
 
 import com.diligroup.Home.HomeActivity;
 import com.diligroup.R;
+import com.diligroup.UserSet.activity.ReportSex;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.CommonBean;
 import com.diligroup.net.Action;
@@ -37,6 +38,7 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
 //    @Bind(R.id.bt_login)
 //    Button bt_login;
 
+    boolean isFirst=true;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -69,6 +71,7 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
         String passdWord = et_password.getText().toString();
         if (!TextUtils.isEmpty(phoneNum) && StringUtils.isMobileNumber(phoneNum)) {
             if (!TextUtils.isEmpty(passdWord)) {
+                LogUtils.e("passwork=========="+DigestUtils.stringMD5(passdWord));
                 Api.login(phoneNum, DigestUtils.stringMD5(passdWord), this);
             } else {
                 ToastUtil.showShort(this, "密码不能为空");
@@ -91,7 +94,10 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
 
     @Override
     public void onError(Request request, Action action, Exception e) {
-
+            if (action==Action.LOGIN){
+                ToastUtil.showShort(LoginActivity.this,"登陆失败，服务器出问题了");
+                LogUtils.e(e.getMessage());
+            }
     }
 
     @Override
@@ -101,7 +107,13 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
             LogUtils.e(bean.getCode() + "----------" + bean.getMessage());
             if (bean.getCode().equals("000000")) {
                 ToastUtil.showShort(this, "登录成功");
-                readyGo(HomeActivity.class);
+                //如果是第一次登陆用户信息为kong则填写用户信息 否则进入首页面
+                if (isFirst){
+                    readyGo(ReportSex.class);
+                }else{
+                    readyGo(HomeActivity.class);
+                }
+
                 return;
             }
             if (bean.getCode().equals("APP_C010005")){

@@ -14,7 +14,9 @@ public enum Action {
     /*获取验证码*/
     SMSCODE(Urls.SMSCODE),
 /*修改密码*/
-    MODIFY(Urls.MODIFYPSD);
+    MODIFY(Urls.MODIFYPSD),
+    /*登出*/
+    LOGINOUT(Urls.LOGINOUT);
     /**
      * 根据Action获取解析类
      * @param action
@@ -30,6 +32,10 @@ public enum Action {
                 return ProvingCodeBean.class;
             case MODIFY:
                 return CommonBean.class;
+            case LOGINOUT:
+                return CommonBean.class;
+
+
         }
         return null;
     }

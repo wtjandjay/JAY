@@ -4,6 +4,7 @@ package com.diligroup.login;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+import com.baidu.mapapi.map.Text;
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.CommonBean;
@@ -68,7 +69,7 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
     @OnClick(R.id.bt_getcode)
     public void getRegistCode() {
         phoneNum = et_phone.getText().toString();
-        if (TextUtils.isEmpty(phoneNum)&&StringUtils.isMobileNumber(phoneNum)){
+        if (!TextUtils.isEmpty(phoneNum)&&StringUtils.isMobileNumber(phoneNum)){
             Api.getCode(phoneNum,"1",this);
         }else{
             ToastUtil.showShort(this,"请检查手机号码");
@@ -80,11 +81,12 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
         phoneNum = et_phone.getText().toString();
         registCode = et_code.getText().toString();
         psd = et_psd.getText().toString();
-        if (phoneNum != null && !phoneNum.isEmpty() && StringUtils.isMobileNumber(phoneNum)) {
-            if (registCode != null && !registCode.isEmpty()&&!smsCode.isEmpty()) {
+        if (!TextUtils.isEmpty(phoneNum)&& StringUtils.isMobileNumber(phoneNum)) {
+            if (!TextUtils.isEmpty(registCode)&&!TextUtils.isEmpty(smsCode)) {
                 if (registCode.equals(smsCode)){
-                    if (psd != null && !psd.isEmpty()) {
-                        Api.register("C0100", "add", phoneNum, DigestUtils.stringMD5(psd), this);
+                    if (!TextUtils.isEmpty(psd)) {
+                        LogUtils.e("passwork=========="+DigestUtils.stringMD5(psd));
+                        Api.register(phoneNum, DigestUtils.stringMD5(psd), this);
                     } else {
                         ToastUtil.showShort(this, "请输入密码");
                     }
@@ -106,7 +108,14 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
 
     @Override
     public void onError(Request request, Action action, Exception e) {
-
+                    switch (action){
+                        case SMSCODE:
+                            ToastUtil.showShort(RegistActivity.this,"获取验证码失败");
+                            break;
+                        case REGISTER:
+                            ToastUtil.showShort(RegistActivity.this,"注册失败，服务器出问题了");
+                            break;
+                    }
     }
 
     @Override
@@ -129,13 +138,13 @@ public class RegistActivity extends BaseAcitvity implements RequestManager.Resul
                     ProvingCodeBean  smsBean= (ProvingCodeBean) object;
                     if (smsBean.getCode().equals("000000")){
                         smsCode=smsBean.sendResponse.getSmsCode();
-                        LogUtils.d("smsCode======"+smsCode);
+                        LogUtils.e("smsCode======"+smsCode);
                         break;
                     }
 
             }
         }else{
-            ToastUtil.showShort(this, "服务器出问题了 返回 NULL");
+            ToastUtil.showShort(this, "服务器出问题了");
 
         }
 

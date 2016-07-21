@@ -4,7 +4,6 @@
     android:layout_height="37dp"
     android:background="@color/common_backgroud"
     android:orientation="horizontal"
-    android:layout_marginLeft="9dp"
     android:padding="10dp"
     android:layout_gravity="center_horizontal">
 
@@ -21,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:paddingLeft="5dp"
-        android:text="洗护"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+        android:text="成品分类"
+        android:textColor="@color/black1"
+        android:textSize="12sp" />
 </LinearLayout>

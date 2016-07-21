@@ -19,4 +19,7 @@
     <string name="permission_rationale">浏览图片需要您提供浏览存储的权限</string>
     <string name="store_supply">门店供应</string>
     <string name="custoom">自定义</string>
+    <string name="breakfast">早餐</string>
+    <string name="lunch">中餐</string>
+    <string name="dinner">晚餐</string>
 </resources>

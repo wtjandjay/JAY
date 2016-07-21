@@ -4,6 +4,7 @@ import android.widget.DatePicker;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
@@ -19,7 +20,7 @@ public class ReportBirthday extends BaseAcitvity {
 
     @Bind(R.id.data_select)
     DatePicker data_select;
-
+    int currentYear;
     @Override
     protected void onStart() {
         super.onStart();
@@ -50,7 +51,7 @@ public class ReportBirthday extends BaseAcitvity {
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-
+        currentYear=year;
         data_select.updateDate(year, month, day);
     }
 
@@ -58,7 +59,11 @@ public class ReportBirthday extends BaseAcitvity {
     public void getTime() {
 
         ToastUtil.showShort(ReportBirthday.this, "您选择的日期是：" + data_select.getYear() + "年" + (data_select.getMonth() + 1) + "月" + data_select.getDayOfMonth() + "日。");
-
+        int old=currentYear-data_select.getYear();
+        String brithday=data_select.getYear()+"-"+data_select.getMonth()+1+"-"+data_select.getDayOfMonth();
+        ToastUtil.showShort(ReportBirthday.this,"你当前"+old+"岁");
+        ReportUserInfos.setUserBirthday(brithday);
+        readyGo(ReportWork.class);
     }
 
     @Override

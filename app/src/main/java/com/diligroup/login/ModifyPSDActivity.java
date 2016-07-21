@@ -10,6 +10,7 @@ import com.diligroup.bean.ProvingCodeBean;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
 import com.diligroup.net.RequestManager;
+import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.StringUtils;
 import com.diligroup.utils.ToastUtil;
@@ -77,10 +78,9 @@ public class ModifyPSDActivity extends BaseAcitvity implements RequestManager.Re
         password = et_psd.getText().toString();
         if (!TextUtils.isEmpty(phoneNumber) && StringUtils.isMobileNumber(phoneNumber)) {
             if (!TextUtils.isEmpty(codeNumber)) {
-                //
                 if (server_code.equals(codeNumber)){
                     if (!password.isEmpty()&&password.length()>=6) {
-                            Api.modifyPsd(phoneNumber,password,this);
+                            Api.modifyPsd(phoneNumber, DigestUtils.stringMD5(password),this);
                     } else{
                         ToastUtil.showShort(this, "请输入密码");}
                 }else{

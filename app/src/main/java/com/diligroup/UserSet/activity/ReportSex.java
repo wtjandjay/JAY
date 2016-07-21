@@ -4,7 +4,11 @@ import android.view.KeyEvent;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
+import com.diligroup.utils.ToastUtil;
+
+import butterknife.OnClick;
 
 /**
  * 上报性别
@@ -16,7 +20,7 @@ public class ReportSex extends BaseAcitvity {
 //    RadioButton rb_girl;
 //    @Bind(R.id.rg_sex)
 //    RadioGroup  rg_sex;
-
+private int sexMark;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_select_sex;
@@ -42,22 +46,7 @@ public class ReportSex extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
-//        rb_boy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(isChecked){
-//                    ToastUtil.showShort(ReportSex.this,buttonView.getText().toString());
-//                }
-//            }
-//        });
-//        rb_girl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked){
-//                    ToastUtil.showShort(ReportSex.this,buttonView.getText().toString());
-//                }
-//            }
-//        });
+
     }
 
     @Override
@@ -69,11 +58,22 @@ public class ReportSex extends BaseAcitvity {
         return true;
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//      readyGo(UserInfoActivity.class);
-//        this.finish();
-//
-//    }
+    @OnClick(R.id.ll_boy)
+    public void reportBoy(){
+            sexMark=1;
+    }
+    @OnClick(R.id.ll_girl)
+    public void reportGirl(){
+            sexMark=0;
+    }
+    @OnClick(R.id.bt_ok_sex)
+    public void reportSex(){
+        if (sexMark==1||sexMark==0){
+            ReportUserInfos.setUserSex(sexMark);
+            readyGo(ReportBirthday.class);
+            return;
+        }
+        ToastUtil.showShort(ReportSex.this,"请选择性别");
+
+    }
 }

@@ -30,29 +30,6 @@ import me.nereo.multi_image_selector.MultiImageSelector;
  */
 public class CommonUtils {
     /**
-     * 判断date3 距离前两个日期哪个更接近一些
-     * @param DATE1
-     * @param DATE2
-     * @param date3
-     * @return
-     */
-    public static String compare_date(String DATE1, String DATE2,String date3) {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            Date dt1 = df.parse(DATE1);
-            Date dt2 = df.parse(DATE2);
-            Date dt3 = df.parse(date3);
-            Date nearDate= Math.abs(dt3.getTime()-dt1.getTime())<Math.abs(dt3.getTime()-dt2.getTime())?dt1:dt2;
-            String nearStr= df.format(nearDate);
-            System.out.println("最近的日期是===="+nearStr);
-            System.out.println("两个日期相等吗===="+nearStr.equals(DATE1));
-            return nearStr;
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
-        return null;
-    }
-    /**
      * 验证手机号格式
      *
      * @param mobiles

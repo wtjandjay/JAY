@@ -11,8 +11,8 @@
 
         <ImageView
             android:id="@+id/addlunch_right_icon"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="55.6dp"
+            android:layout_height="55.6dp"
             android:layout_centerVertical="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/addlunch_right_icon"
             android:orientation="vertical"
             android:paddingRight="10dp">
@@ -62,9 +62,9 @@
                 android:paddingRight="4dp"
                 android:paddingTop="2dp"
                 android:singleLine="true"
-                android:text="136 k"
+                android:text="菜品评价"
                 android:textColor="#ff5252"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
         </LinearLayout>
     </RelativeLayout>
 
