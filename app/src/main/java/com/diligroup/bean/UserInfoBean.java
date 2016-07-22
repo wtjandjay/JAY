@@ -1,9 +1,20 @@
 package com.diligroup.bean;
 
+import java.io.Serializable;
+
 /**
+ *
  * Created by Administrator on 2016/7/21.
  */
-public  class UserInfoBean  {
+public  class UserInfoBean  implements Serializable{
+    public static UserInfoBean  infoBean=null;
+    public static UserInfoBean getInstance(){
+        if (infoBean==null){
+            infoBean=new UserInfoBean();
+        }
+        return infoBean;
+    }
+
     //性别  1boy  0girl
     public Integer  sex;
 //生日 yyyy-MM-dd格式

@@ -48,6 +48,7 @@ public class CalendarAdapter extends BaseAdapter {
 
 	private String showYear = ""; // 用于在头部显示的年份
 	private String showMonth = ""; // 用于在头部显示的月份
+	private Typeface typeFace;
 
 	public String getShowDay() {
 		return sys_day;
@@ -84,6 +85,7 @@ public class CalendarAdapter extends BaseAdapter {
 		lc = new LunarCalendar();
 		this.res = rs;
 
+		typeFace = Typeface.createFromAsset(context.getAssets(),"fonts/FZLTCXHJW.TTF");
 		int stepYear = year_c + jumpYear;
 		int stepMonth = month_c + jumpMonth;
 		if (stepMonth > 0) {
@@ -149,9 +151,8 @@ public class CalendarAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = LayoutInflater.from(context).inflate(R.layout.calendar_item, null);
 		}
-//		convertView.setLayoutParams(new GridView.LayoutParams((CommonUtils.getScreenWidth(context)-28)/7, CommonUtils.getScreenHeight(context)*13/32/7));
 
-		Typeface typeFace = Typeface.createFromAsset(context.getAssets(),"fonts/FZLTCXHJW.TTF");
+
 		TextView textView = (TextView) convertView.findViewById(R.id.tvtext);
 		String d = dayNumber[position].split("\\.")[0];
 		String dv = dayNumber[position].split("\\.")[1];
@@ -171,8 +172,6 @@ public class CalendarAdapter extends BaseAdapter {
 
 		if (position < daysOfMonth + dayOfWeek && position >= dayOfWeek) {
 			// 应用字体
-			textView.setTypeface(typeFace);
-
 			// 当前月信息显示
 			textView.setTextColor(context.getResources().getColor(R.color.black1));// 当月字体设黑
 //			drawable = res.getDrawable(R.drawable.calendar_item_selected_bg);

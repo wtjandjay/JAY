@@ -38,7 +38,7 @@ public class RighAdapter extends RecyclerView.Adapter implements View.OnClickLis
         MyViewHoder viewHoder = (MyViewHoder) holder;
 //        String name=mList.get(position);
 //        Picasso.with(mContext).load(R.drawable.dili_logo).into(viewHoder.addlunchRightIcon);
-        viewHoder.addlunchDishesIngredients.setText("配料：" + "小葱+蘑菇");
+        viewHoder.addlunchDishesIngredients.setText("配料：" + "小葱+猪肝");
         viewHoder.addlunchDishesNum.setText("5");
         viewHoder.addlunchGramsNum.setText("123kg");
 

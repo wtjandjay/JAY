@@ -1,20 +1,35 @@
 package com.diligroup.UserSet.activity;
 
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
+
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.bean.UserInfoBean;
 import com.diligroup.utils.NetUtils;
 
+import butterknife.Bind;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 /***
  * 食物禁忌上报
  */
-public class ReportNoeat extends BaseAcitvity {
+public class ReportNoeat extends BaseAcitvity implements RadioGroup.OnCheckedChangeListener{
 //    @Bind(R.id.comm_title)
 //    TextView tv_ttle;
 //    @Bind(R.id.lv_noeat)
 //    ListView lv_noeat;
 //    List<String> foodList;
+    @Bind(R.id.cb_rangrou)
+    CheckBox cb_rangrou;
+    @Bind(R.id.cb_zhurou)
+    CheckBox cb_zhurou;
+    @Bind(R.id.cb_qin)
+    CheckBox cb_birds;
+    @Bind(R.id.cb_shuichan)
+    CheckBox cb_fish;
     @Override
     public void setTitle() {
         super.setTitle();
@@ -42,40 +57,38 @@ public class ReportNoeat extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
-        getMinZuData();
-//        lv_noeat.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_checked, foodList));
-//        lv_noeat.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-    }
-
-    private void getMinZuData() {
-//        foodList = new ArrayList<>();
-//        foodList.add("花粉过敏");
-//        foodList.add("海鲜过敏");
-//        foodList.add("花生过敏");
-//        foodList.add("蛋类过敏");
-//        foodList.add("奶制品过敏");
-//
-//        foodList.add("不吃辣");
-//        foodList.add("不吃葱");
-//        foodList.add("不吃甜");
-//        foodList.add("不吃苦");
 
     }
+
+
 
     @OnClick(R.id.bt_ok_noeat)
     public void reportNoeat() {
-//        int pos= lv_noeat.getCheckedItemPosition();
-//        long[] poses = lv_noeat.getCheckedItemIds();
-//        int a = lv_noeat.getCheckedItemPosition();
-//        int b = lv_noeat.getCheckedItemCount();
-//        long[] c = lv_noeat.getCheckedItemIds();
-//        SparseBooleanArray arrays = lv_noeat.getCheckedItemPositions();
-//        for (int i = 0; i <= foodList.size(); i++) {
-//            if (arrays.get(i)) {
-//                String  fodname=foodList.get(i).toString();
-//                ToastUtil.showShort(this, "no eat food ====" + fodname);
-//            }
-//        }
 
+        UserInfoBean.getInstance().setNoEatFood("");
+        readyGo(ReportAllergy.class);
+    }
+
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId){
+            case R.id.cb_zhurou:
+                if (cb_zhurou.isChecked()){
+                    cb_zhurou.getText();
+                }
+                break;
+            case R.id.cb_rangrou:
+
+                break;
+            case R.id.cb_qin:
+
+                break;
+            case R.id.cb_shuichan:
+
+                break;
+
+
+        }
     }
 }

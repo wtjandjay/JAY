@@ -47,7 +47,7 @@ public class FeedbackActivity extends BaseAcitvity implements View.OnClickListen
     }
     public void setTitle() {
         super.setTitle();
-        setTitle("菜品评价");
+        tv_title.setText("菜品评价");
         isShowBack(true);
     }
     @Override

@@ -4,6 +4,7 @@ import android.view.KeyEvent;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.bean.UserInfoBean;
 import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
@@ -14,13 +15,8 @@ import butterknife.OnClick;
  * 上报性别
  */
 public class ReportSex extends BaseAcitvity {
-//    @Bind(R.id.rb_boy)
-//    RadioButton rb_boy;
-//    @Bind(R.id.rb_girl)
-//    RadioButton rb_girl;
-//    @Bind(R.id.rg_sex)
-//    RadioGroup  rg_sex;
-private int sexMark;
+
+    private int sexMark;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_select_sex;
@@ -49,27 +45,22 @@ private int sexMark;
 
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            readyGo(UserInfoActivity.class);
-//            this.finish();
-        }
-        return true;
-    }
 
     @OnClick(R.id.ll_boy)
     public void reportBoy(){
+
             sexMark=1;
+        ToastUtil.showShort(this,"男");
     }
     @OnClick(R.id.ll_girl)
     public void reportGirl(){
             sexMark=0;
+        ToastUtil.showShort(this,"女");
     }
     @OnClick(R.id.bt_ok_sex)
     public void reportSex(){
         if (sexMark==1||sexMark==0){
-            ReportUserInfos.setUserSex(sexMark);
+            UserInfoBean.getInstance().setSex(sexMark);
             readyGo(ReportBirthday.class);
             return;
         }

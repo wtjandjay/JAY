@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.diligroup.R;
@@ -52,10 +54,13 @@ public class UserInfoActivity extends BaseAcitvity {
     @Bind(R.id.tv_time_of_month)
     TextView tv_time_of_month;
     @Bind(R.id.user_icon)
-   CircleImageView userIcon;
+    CircleImageView userIcon;
+    @Bind(R.id.rl_time_of_month)
+    RelativeLayout rl_time_of_month;//生理期rl布局
     private ArrayList<String> mSelectPath;
     private static final int REQUEST_IMAGE = 2;
     private static final int CROP_CODE = 3;
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -88,7 +93,12 @@ public class UserInfoActivity extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
-
+        rl_time_of_month.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                readyGoForResult(PhysiologicalPeriodActivity.class, 10);
+            }
+        });
     }
 //
 //    @OnClick(R.id.rl_mingzu)
@@ -153,22 +163,26 @@ public class UserInfoActivity extends BaseAcitvity {
         readyGo(ReportAllergy.class);
     }
 
-    @OnClick(R.id.rl_time_of_month)//生理期
-    public void ClickCalendar() {
-        readyGoForResult(PhysiologicalPeriodActivity.class, 10);
-    }
+//    @OnClick(R.id.rl_time_of_month)//生理期
+//    public void ClickCalendar() {
+//
+//    }
+
     @OnClick(R.id.user_icon)
     public void ChangeHeadPhoto() {
-       new UpLoadPhotoUtils(this).pickImage();
+        new UpLoadPhotoUtils(this).pickImage();
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case 10:
-                ArrayList<String> selectDate = (ArrayList<String>) data.getSerializableExtra("cycle");
-                if(selectDate.size()>1) {
-                    tv_time_of_month.setText(selectDate.get(0) + "--" + selectDate.get(1));
+                if (null != data) {
+                    ArrayList<String> selectDate = (ArrayList<String>) data.getSerializableExtra("cycle");
+                    if (selectDate.size() > 1) {
+                        tv_time_of_month.setText(selectDate.get(0) + "--" + selectDate.get(1));
+                    }
                 }
                 break;
 

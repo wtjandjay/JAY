@@ -4,6 +4,7 @@ import android.widget.DatePicker;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.bean.UserInfoBean;
 import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
@@ -62,7 +63,7 @@ public class ReportBirthday extends BaseAcitvity {
         int old=currentYear-data_select.getYear();
         String brithday=data_select.getYear()+"-"+data_select.getMonth()+1+"-"+data_select.getDayOfMonth();
         ToastUtil.showShort(ReportBirthday.this,"你当前"+old+"岁");
-        ReportUserInfos.setUserBirthday(brithday);
+        UserInfoBean.getInstance().setBirthday(brithday);
         readyGo(ReportWork.class);
     }
 

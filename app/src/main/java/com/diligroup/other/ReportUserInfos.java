@@ -8,7 +8,7 @@ import com.diligroup.bean.UserInfoBean;
 public class ReportUserInfos {
     public static ReportUserInfos  reportUserInfos=null;
     public static ReportUserInfos getInstance(){
-        if (userInfo==null){
+        if (reportUserInfos==null){
             return new ReportUserInfos();
         }
         return reportUserInfos;
@@ -29,4 +29,23 @@ public class ReportUserInfos {
     public static String getUserBirthday(){
        return userInfo.getBirthday();
     }
+    public static void setUserWork(String work){
+        userInfo.setJob(work);
+    }
+    public static String getUserWork(){
+        return userInfo.getJob();
+    }
+    public static  String getUserHeight(){
+        return userInfo.getHeight();
+    }
+    public static  String getUserWeight(){
+        return userInfo.getWeight();
+    }
+    public static void setUserHeight(String selectHeight) {
+         userInfo.setHeight(selectHeight);
+    }
+    public static void setUserWeight(String weight){
+        userInfo.setWeight(weight);
+    }
+
 }

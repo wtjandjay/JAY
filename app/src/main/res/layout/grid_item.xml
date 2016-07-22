@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:textColor="@color/black"
         android:text="程序员"
-        android:textSize="18sp"
+        android:textSize="12sp"
         android:singleLine="true"
         android:padding="15dp"/>
 

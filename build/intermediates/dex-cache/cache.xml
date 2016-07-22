@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="E:\GitHub\NewApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="25a62b1c92038195655e322126b3711941047d25">
+        <dex dex="E:\GitHub\NewApp\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_0cc9b705ae9cbc7784d654f5486bb666903cb93d.jar" />
+    </item>
+
+</items>

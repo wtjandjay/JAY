@@ -16,4 +16,7 @@ public class Urls {
     public static String MODIFYPSD=HOST+"/dis/prepose.action";
     public static String LOGINOUT=HOST+"/dis/prepose.action";
 
+    /*获取首页轮播图  */
+    public static String GETBANNER=HOST+"/dis/prepose.action";
+    public static String UPDATA_USERINFOS=HOST+"/dis/prepose.action";
 }

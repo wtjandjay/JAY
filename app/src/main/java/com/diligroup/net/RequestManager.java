@@ -38,7 +38,7 @@ import okhttp3.Response;
 public class RequestManager {
 
     private static RequestManager mInstance;
-    private OkHttpClient okHttpClient;
+    private static OkHttpClient okHttpClient;
     private Gson mGson;
     private Handler mDelivery;
 
@@ -551,7 +551,7 @@ public class RequestManager {
     /**
      * 取消所有网络请求
      */
-    public void cancelAll(){
+    public static void cancelAll(){
         Dispatcher dispatcher = okHttpClient.dispatcher();
         dispatcher.cancelAll();
     }

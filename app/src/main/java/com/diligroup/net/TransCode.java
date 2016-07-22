@@ -9,5 +9,9 @@ public class TransCode {
     public static String SMSCode = "M0053";
     public static String ModifyCode="C0100";
     public static String LoginOut="C0100";
+    public static String BannerCode = "M0073";
+    public static String DISHVARIETYEVALUATE = "C0110";
+    public static String updataUserInfos = "C0100";
+
 
 }

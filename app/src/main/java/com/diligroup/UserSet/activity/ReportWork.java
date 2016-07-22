@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.bean.UserInfoBean;
+import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
@@ -52,7 +54,6 @@ public class ReportWork extends BaseAcitvity  {
     protected void initViewAndData() {
         isShowBack(true);
         initData();
-
         gv_light.setAdapter(new WorkAdapter(lightWork));
         gv_middle.setAdapter(new WorkAdapter(middleWork));
         gv_heavy.setAdapter(new WorkAdapter(heavyWork));
@@ -79,9 +80,9 @@ public class ReportWork extends BaseAcitvity  {
     }
 
     private void initData() {
-        heavyWork = new String[]{"工人", "军人", "运动员", "艺人"};
-        middleWork = new String[]{"销售", "采购", "服务", "学生", "司机"};
-        lightWork = new String[]{"老板", "教师", "工程师", "设计师", "作家", "文职人员", "其他"};
+        heavyWork = getResources().getStringArray(R.array.heavy);
+        middleWork =getResources().getStringArray(R.array.middle);
+        lightWork = getResources().getStringArray(R.array.light);
     }
 
     @Override
@@ -93,7 +94,10 @@ public class ReportWork extends BaseAcitvity  {
 
     @OnClick(R.id.bt_commit_work)
     public void reportWorkData() {
+
         ToastUtil.showLong(this, "You  work ====" + userSelect);
+        UserInfoBean.getInstance().setJob(userSelect);
+        readyGo(ReportHeight.class);
     }
 
 

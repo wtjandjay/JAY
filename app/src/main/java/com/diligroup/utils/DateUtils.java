@@ -117,7 +117,7 @@ public class DateUtils {
     public static String getDate(String startdate, int delayDay) {
         Date date = null;
         try {
-            date = (new SimpleDateFormat("yyyy年MM月dd日")).parse(startdate);
+            date = (new SimpleDateFormat("yyyy年M月d日")).parse(startdate);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -125,25 +125,25 @@ public class DateUtils {
         cal.setTime(date);
         cal.add(Calendar.DATE, delayDay);
         int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK) - 1;
-        String dateStr=new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime());
-        if(dateStr.charAt(5)=='0' )
+        String dateStr=new SimpleDateFormat("yyyy年M月d日").format(cal.getTime());
+//        if(dateStr.charAt(5)=='0' )
         switch (dayOfWeek) {
             case 0:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime()) +" 周日";
+                return new SimpleDateFormat("yyyy年M月dd日").format(cal.getTime()) +" 周日";
             case 1:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime()) + " 周一";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime()) + " 周一";
             case 2:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime()) + " 周二";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime()) + " 周二";
             case 3:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime()) + " 周三";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime()) + " 周三";
             case 4:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime()) + " 周四";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime()) + " 周四";
             case 5:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime())+ " 周五";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime())+ " 周五";
             case 6:
-                return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime())+ " 周六";
+                return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime())+ " 周六";
         }
-      return new SimpleDateFormat("yyyy年MM月dd日").format(cal.getTime());
+      return new SimpleDateFormat("yyyy年M月d日").format(cal.getTime());
     }
 
 }

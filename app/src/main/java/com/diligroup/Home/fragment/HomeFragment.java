@@ -14,22 +14,28 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import com.diligroup.Home.AddLunchActivity;
 import com.diligroup.Home.adapter.HomeAdapter;
 import com.diligroup.R;
-import com.diligroup.UserSet.activity.PhysiologicalPeriodActivity;
 import com.diligroup.base.BaseFragment;
+import com.diligroup.bean.CommonBean;
+import com.diligroup.net.Action;
+import com.diligroup.net.Api;
+import com.diligroup.net.RequestManager;
 import com.diligroup.utils.CommonUtils;
 import com.diligroup.utils.DateUtils;
+import com.diligroup.utils.LogUtils;
 import com.diligroup.view.MyViewFilpper;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import okhttp3.Request;
 
 /**
  * Created by hjf on 2016/7/18.
  * 首页
  */
-public class HomeFragment extends BaseFragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class HomeFragment extends BaseFragment implements View.OnClickListener, ViewPager.OnPageChangeListener, RequestManager.ResultCallback {
 
     @Bind(R.id.home_flipper)
     MyViewFilpper homeFlipper;
@@ -75,6 +81,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
     LinearLayout home_rootView;
     @Bind(R.id.home_currend_date)
     RelativeLayout home_currend_date;
+
     private LinearLayout.LayoutParams thisService;//本次服务评价文本布局
     private Intent mIntent;
     private String currentDay;//今天日期字符串
@@ -138,6 +145,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         homeDinner.setOnClickListener(this);
         home_vPager.setOnPageChangeListener(this);
         home_currend_date.setOnClickListener(this);
+
     }
 
     @Override
@@ -147,6 +155,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
     }
 
     private void initDate() {
+        Api.getBanner("1","1",this);
         int image[] = new int[]
                 {
                         R.mipmap.banner_1, R.mipmap.banner_2, R.mipmap.banner_3
@@ -190,18 +199,19 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
                 String tempDay = DateUtils.getDate(homeToday.getText().toString().trim(), 1);
                 homeToday.setText(tempDay.split(" ")[0]);
                 if (tempDay.split(" ")[0].equals(currentDay)) {
-                    homeWeekday.setText("今天" + tempDay.split(" ")[1]);
+                    homeWeekday.setText("（今天、" + tempDay.split(" ")[1]+")");
                 } else {
-                    homeWeekday.setText(tempDay.split(" ")[1]);
+                    homeWeekday.setText("（"+tempDay.split(" ")[1]+"）");
                 }
                 break;
+
             case R.id.home_preDay:
                 String temp = DateUtils.getDate(homeToday.getText().toString().trim(), -1);
                 homeToday.setText(temp.split(" ")[0]);
                 if (temp.split(" ")[0].equals(currentDay)) {
-                    homeWeekday.setText("今天" + temp.split(" ")[1]);
+                    homeWeekday.setText("（今天、" + temp.split(" ")[1]+"）");
                 } else {
-                    homeWeekday.setText(temp.split(" ")[1]);
+                    homeWeekday.setText("（"+temp.split(" ")[1]+"）");
                 }
                 break;
             case R.id.home_breakfast_food:
@@ -217,10 +227,12 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
                 home_vPager.setCurrentItem(2);
                 break;
             case R.id.home_currend_date:
-                mIntent = new Intent(getActivity(), PhysiologicalPeriodActivity.class);
-                mIntent.putExtra("isFromHome", true);
-                startActivityForResult(mIntent, 10);
+//                mIntent = new Intent(getActivity(), PhysiologicalPeriodActivity.class);
+//                mIntent.putExtra("isFromHome", true);
+//                startActivityForResult(mIntent, 10);
+                startActivity(new Intent(getActivity(), AddLunchActivity.class));
                 break;
+
         }
     }
 
@@ -312,6 +324,23 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
                     homeWeekday.setText("(" + DateUtils.getWeekdayOfMonth(currentYear, currentMonth, currentDay) + ")");
                 }
                 break;
+        }
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+        if(object!=null){
+            CommonBean ben= (CommonBean) object;
+            if(ben.getCode().equals("000000")){
+                LogUtils.i("轮播图接口调用成功");
+            }else{
+                LogUtils.i("轮播图接口调失败");
+            }
         }
     }
 }

@@ -42,7 +42,16 @@
         <activity android:name=".login.RegistActivity">
 
         </activity>
-        <activity android:name=".UserSet.activity.ReportBirthday" />
+        <activity android:name=".Home.FoodDetailsActivity">
+
+        </activity>
+        <activity android:name=".UserSet.activity.ReportBirthday">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".UserSet.activity.ReportHeight" />
         <activity android:name=".UserSet.activity.ReportAllergy">
         </activity>
@@ -121,11 +130,6 @@
             android:windowSoftInputMode="adjustPan">
         </activity>
         <activity android:name=".UserSet.activity.ReportWhere">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
     </application>

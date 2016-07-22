@@ -13,12 +13,16 @@ public enum Action {
     REGISTER(Urls.REGISTER),
     /*获取验证码*/
     SMSCODE(Urls.SMSCODE),
-/*修改密码*/
+    /*修改密码*/
     MODIFY(Urls.MODIFYPSD),
+    BANNER(Urls.GETBANNER),
     /*登出*/
-    LOGINOUT(Urls.LOGINOUT);
+    LOGINOUT(Urls.LOGINOUT),
+    /*上报更新用户信息*/
+    REPORT_USERINFOS(Urls.UPDATA_USERINFOS);
     /**
      * 根据Action获取解析类
+     *
      * @param action
      * @return
      */
@@ -32,7 +36,11 @@ public enum Action {
                 return ProvingCodeBean.class;
             case MODIFY:
                 return CommonBean.class;
+            case BANNER:
+                return CommonBean.class;
             case LOGINOUT:
+                return CommonBean.class;
+            case REPORT_USERINFOS:
                 return CommonBean.class;
 
 
@@ -42,6 +50,7 @@ public enum Action {
 
     /**
      * 获取枚举的值 url
+     *
      * @param action
      * @return
      */

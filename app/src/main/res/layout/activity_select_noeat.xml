@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <include layout="@layout/comm_title" />
-<include layout="@layout/title_info"/>
+    <include layout="@layout/title_info"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,6 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <CheckBox
+            android:paddingLeft="100dp"
+            android:text="猪肉"
             android:id="@+id/cb_zhurou"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
