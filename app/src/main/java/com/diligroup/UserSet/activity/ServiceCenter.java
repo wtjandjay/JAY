@@ -2,7 +2,10 @@ package com.diligroup.UserSet.activity;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
+
+import okhttp3.Request;
 
 public class ServiceCenter extends BaseAcitvity {
     @Override
@@ -30,6 +33,16 @@ public class ServiceCenter extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 }

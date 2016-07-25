@@ -12,6 +12,12 @@ public class TransCode {
     public static String BannerCode = "M0073";
     public static String DISHVARIETYEVALUATE = "C0110";
     public static String updataUserInfos = "C0100";
+    public static String GetWorkType="M0072";
+    public static String GET_NOEAT_FOOD="M0038";
 
+    public static String GET_ALLERGY_FOOD="M0038";
+
+    public static String GET_SPECIAL="M0038";
+    public static String GET_OTHER="M0038";
 
 }

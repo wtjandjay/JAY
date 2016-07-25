@@ -3,6 +3,7 @@ package com.diligroup.UserSet.activity;
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.UserInfoBean;
+import com.diligroup.net.Action;
 import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报体重
@@ -59,8 +61,8 @@ public class ReportWeight extends BaseAcitvity {
         ToastUtil.showShort(this, select_weight);
         UserInfoBean.getInstance().setHeight(select_weight);
         readyGo(ReportNoeat.class);
-        String userbirthday=ReportUserInfos.getUserBirthday();
-        LogUtils.e("BIRTHDAY==========="+userbirthday);
+//        String userbirthday=ReportUserInfos.getUserBirthday();
+//        LogUtils.e("WEIGHT==========="+select_weight);
     }
 
     @Override
@@ -68,5 +70,15 @@ public class ReportWeight extends BaseAcitvity {
         super.setTitle();
         tv_title.setText("体重");
         title_infos.setText("您的体重?");
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 }

@@ -10,6 +10,7 @@ import com.diligroup.R;
 import com.diligroup.UserSet.activity.ReportSex;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.CommonBean;
+import com.diligroup.bean.UserBeanFromService;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
 import com.diligroup.net.RequestManager;
@@ -26,7 +27,7 @@ import okhttp3.Request;
 /**
  * 登录 Activity
  */
-public class LoginActivity extends BaseAcitvity implements RequestManager.ResultCallback {
+public class LoginActivity extends BaseAcitvity  {
     @Bind(R.id.input_username)
     AutoCompleteTextView phoneNumber;
     @Bind(R.id.input_password)
@@ -103,12 +104,14 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
     @Override
     public void onResponse(Request request, Action action, Object object) {
         if (object != null&& action==Action.LOGIN) {
-            CommonBean bean = (CommonBean) object;
-            LogUtils.e(bean.getCode() + "----------" + bean.getMessage());
-            if (bean.getCode().equals("000000")) {
+            UserBeanFromService userInfo= (UserBeanFromService) object;
+
+            LogUtils.e(userInfo.getCode() + "----------" + userInfo.getMessage());
+            if (userInfo.getCode().equals("000000")) {
                 ToastUtil.showShort(this, "登录成功");
                 //如果是第一次登陆用户信息为kong则填写用户信息 否则进入首页面
-                if (isFirst){
+
+                if (userInfo.getUserDetail()==null){
                     readyGo(ReportSex.class);
                 }else{
                     readyGo(HomeActivity.class);
@@ -116,11 +119,11 @@ public class LoginActivity extends BaseAcitvity implements RequestManager.Result
 
                 return;
             }
-            if (bean.getCode().equals("APP_C010005")){
+            if (userInfo.getCode().equals("APP_C010005")){
                 ToastUtil.showShort(this, "密码不正确");
                 return;
             }
-            if (bean.getCode().equals("APP_C010001")){
+            if (userInfo.getCode().equals("APP_C010001")){
                 ToastUtil.showShort(this, "密码不正确");
 
             }

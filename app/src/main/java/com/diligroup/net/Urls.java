@@ -5,6 +5,7 @@ package com.diligroup.net;
  */
 public class Urls {
     private static final String HOST="http://192.168.100.67:8181/gateway";
+    public  static String BASE=HOST + "/dis/prepose.action";
     /*登录*/
     public static String LOGIN = HOST + "/dis/prepose.action";
     /*注册*/
@@ -19,4 +20,11 @@ public class Urls {
     /*获取首页轮播图  */
     public static String GETBANNER=HOST+"/dis/prepose.action";
     public static String UPDATA_USERINFOS=HOST+"/dis/prepose.action";
+    /*获取  公共职业信息列表数据*/
+    public static String GET_WORK_TYPE=HOST+"/dis/prepose.action";
+    /*获取  饮食禁忌的 食材*/
+    public static String GET_NO_EAT=HOST+"/dis/prepose.action";
+    /*获取过敏食材*/
+    public static String GET_ALLERGY=HOST+"/dis/prepose.action";
+
 }

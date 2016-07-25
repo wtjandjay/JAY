@@ -5,6 +5,7 @@ import android.util.Log;
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.UserInfoBean;
+import com.diligroup.net.Action;
 import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报身高
@@ -64,5 +66,15 @@ public class ReportHeight extends BaseAcitvity {
         super.setTitle();
         tv_title.setText("身高");
         title_infos.setText("您的身高?");
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 }

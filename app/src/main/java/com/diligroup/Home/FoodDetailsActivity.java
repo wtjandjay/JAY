@@ -2,7 +2,10 @@ package com.diligroup.Home;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
+
+import okhttp3.Request;
 
 /**
  *
@@ -28,6 +31,16 @@ public class FoodDetailsActivity extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 }

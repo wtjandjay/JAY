@@ -10,6 +10,8 @@
     <include layout="@layout/title_info" />
 
     <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rl_light"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,8 +25,8 @@
             android:src="@drawable/iv_shutiao" />
 
         <TextView
+            android:id="@+id/tv_light"
             android:textSize="12sp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -34,7 +36,6 @@
 
         <TextView
             android:textSize="10sp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -44,6 +45,7 @@
     </RelativeLayout>
 
     <GridView
+        android:visibility="invisible"
         android:id="@+id/gv_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,11 +55,13 @@
         android:numColumns="4"
         android:scrollbars="none"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="2dp">
+        android:verticalSpacing="2dp"/>
 
-    </GridView>
+
 
     <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rl_middle"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,8 +75,8 @@
             android:src="@drawable/iv_shutiao" />
 
         <TextView
+            android:id="@+id/tv_middle"
             android:textSize="12sp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -82,7 +86,6 @@
 
         <TextView
             android:textSize="10sp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -92,7 +95,7 @@
     </RelativeLayout>
 
     <GridView
-
+        android:visibility="invisible"
         android:id="@+id/gv_middle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,6 +110,8 @@
     </GridView>
 
     <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rl_heavy"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,6 +125,7 @@
             android:src="@drawable/iv_shutiao" />
 
         <TextView
+            android:id="@+id/tv_heavy"
             android:textSize="12sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,6 +145,7 @@
     </RelativeLayout>
 
     <GridView
+        android:visibility="invisible"
         android:id="@+id/gv_heavy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -149,7 +156,6 @@
         android:scrollbars="none"
         android:stretchMode="columnWidth"
         android:verticalSpacing="2dp">
-
     </GridView>
 
     <Button

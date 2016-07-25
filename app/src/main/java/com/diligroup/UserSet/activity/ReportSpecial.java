@@ -4,10 +4,14 @@ import android.widget.CheckBox;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.bean.GetSpecialBean;
+import com.diligroup.net.Action;
+import com.diligroup.net.Api;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报特殊人群
@@ -54,7 +58,7 @@ public class ReportSpecial extends BaseAcitvity {
 
     @Override
     protected void initViewAndData() {
-
+        Api.getSpecial(this);
 //        specialDatas = new String[]{"孕期", "哺乳期", "术后", "高温", "低温", "高龄"};
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
 //                android.R.layout.simple_list_item_multiple_choice, specialDatas);
@@ -108,5 +112,20 @@ public class ReportSpecial extends BaseAcitvity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+            if (action==Action.GET_SPECIAL&&object!=null){
+                GetSpecialBean  specialBean= (GetSpecialBean) object;
+                if (specialBean.getCode()=="000000"){
+
+                }
+            }
     }
 }

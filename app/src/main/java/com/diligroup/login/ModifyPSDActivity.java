@@ -25,7 +25,7 @@ import okhttp3.Request;
  * 忘记密码
  * 修改密码
  */
-public class ModifyPSDActivity extends BaseAcitvity implements RequestManager.ResultCallback{
+public class ModifyPSDActivity extends BaseAcitvity {
 
     @Bind(R.id.et_code2)
     EditText et_code;

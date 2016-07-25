@@ -4,12 +4,14 @@ import android.widget.Button;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 import com.diligroup.view.CityPicker;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报住址
@@ -77,5 +79,15 @@ public class ReportWhere extends BaseAcitvity {
     @OnClick(R.id.bt_ok_where)
     public void reportWhere(){
         ToastUtil.showShort(this,select_city);
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 }

@@ -38,6 +38,11 @@
         </activity>
         <activity android:name=".login.ModifyPSDActivity" />
         <activity android:name=".Home.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".login.RegistActivity">
 
@@ -46,11 +51,7 @@
 
         </activity>
         <activity android:name=".UserSet.activity.ReportBirthday">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".UserSet.activity.ReportHeight" />
         <activity android:name=".UserSet.activity.ReportAllergy">

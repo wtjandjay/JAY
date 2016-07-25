@@ -24,6 +24,7 @@ import com.diligroup.UserSet.fragment.UserSetFragment;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.EventBusBean;
 import com.diligroup.dialog.RotateShowProgressDialog;
+import com.diligroup.net.Action;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.PictureFileUtils;
@@ -39,6 +40,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import me.nereo.multi_image_selector.MultiImageSelector;
+import okhttp3.Request;
 
 public class HomeActivity extends BaseAcitvity {
 
@@ -127,6 +129,16 @@ public class HomeActivity extends BaseAcitvity {
         adapter.addFragment(new AfterFragment(), getString(R.string.after));
         adapter.addFragment(new UserSetFragment(), getString(R.string.user));
         mViewPager.setAdapter(adapter);
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 

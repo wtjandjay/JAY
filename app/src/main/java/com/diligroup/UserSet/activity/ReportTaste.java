@@ -7,10 +7,12 @@ import android.widget.Toast;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报 口味
@@ -103,5 +105,15 @@ public class ReportTaste extends BaseAcitvity {
     private void getTasteData() {
 
        tasteArray=new String[]{"酸","甜","苦","辣","咸","其他"};
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 }

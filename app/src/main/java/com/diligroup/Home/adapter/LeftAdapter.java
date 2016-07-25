@@ -1,65 +1,72 @@
 package com.diligroup.Home.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.diligroup.R;
-import com.squareup.picasso.Picasso;
+import android.widget.BaseAdapter;
 
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by hjf on 2016/7/14.
  * x
  */
-public class LeftAdapter extends RecyclerView.Adapter {
+public class LeftAdapter extends BaseAdapter {
     Context mContext;
     List<String> mlist;
-
-    public LeftAdapter(Context mContext, List<String> mlist) {
+    OnGetView onGetView;
+    public LeftAdapter(Context mContext, List<String> mlist,OnGetView onGetView) {
         super();
         this.mContext = mContext;
         this.mlist = mlist;
+        this.onGetView=onGetView;
+    }
+
+//    @Override
+//    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        View view = View.inflate(mContext, R.layout.addlunch_child, null);
+//        return new MyViewHolder(view,listener);
+//    }
+//
+//    @Override
+//    public void onBindViewHolder(ViewHolder holder, int position) {
+//        LeftAdapter.MyViewHolder viewHoder = (MyViewHolder) holder;
+//        if(position==0){
+//            viewHoder.dishIcon.setSelected(true);
+//        }
+//        Picasso.with(mContext).load(R.drawable.test_drawable_selector).into(viewHoder.dishIcon);
+//        viewHoder.dishName.setText("哈哈哈哈");
+//    }
+
+
+    @Override
+    public int getCount() {
+        return mlist == null ? 0 : mlist.size();
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = View.inflate(mContext, R.layout.addlunch_child, null);
-        return new MyViewHolder(view);
+    public Object getItem(int position) {
+        return null;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        LeftAdapter.MyViewHolder viewHoder = (MyViewHolder) holder;
-        Picasso.with(mContext).load(R.drawable.dili_logo).into(viewHoder.dishIcon);
-        viewHoder.dishName.setText("哈哈哈哈");
+    public long getItemId(int position) {
+        return 0;
     }
 
     @Override
-    public int getItemCount() {
-//        return mlist == null ? 0 : mlist.size();
-       return  5;
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return onGetView.getView(position,convertView);
     }
-
-    class MyViewHolder extends ViewHolder {
-        @Bind(R.id.dish_icon)
-        ImageView dishIcon;
-        @Bind(R.id.dish_name)
-        TextView dishName;
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-//        ImageView dishName= (ImageView) itemView.findViewById(R.id.dish_icon);
-//        TextView tvDishName= (TextView) itemView.findViewById(R.id.dish_name);
-            ButterKnife.bind(this, itemView);
-        }
+    public interface OnGetView {
+        /**
+         *
+         * @param position
+         *            下标
+         * @param convertView
+         *            视图
+         * @return
+         */
+        public View getView(int position, View convertView);
     }
 }

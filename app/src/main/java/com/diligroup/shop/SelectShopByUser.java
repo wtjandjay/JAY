@@ -2,9 +2,11 @@ package com.diligroup.shop;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 用户手动 选择 门店地址
@@ -39,6 +41,16 @@ public class SelectShopByUser extends BaseAcitvity {
     }
     @OnClick(R.id.bt_report_shop)
     public void reportShop(){
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 }

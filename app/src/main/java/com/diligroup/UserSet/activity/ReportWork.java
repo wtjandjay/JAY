@@ -6,23 +6,30 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.UserInfoBean;
+import com.diligroup.bean.WorkDataFromService;
+import com.diligroup.net.Action;
+import com.diligroup.net.Api;
 import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 上报  职业
  * Created by Kevin on 2016/6/16.
  */
-public class ReportWork extends BaseAcitvity  {
+public class ReportWork extends BaseAcitvity {
 
     private String[] lightWork;
     private String[] middleWork;
@@ -34,6 +41,19 @@ public class ReportWork extends BaseAcitvity  {
     GridView gv_middle;
     @Bind(R.id.gv_heavy)
     GridView gv_heavy;
+    List<WorkDataFromService.ListBean>  joblist;
+    @Bind(R.id.tv_light)
+    TextView tv_light;
+    @Bind(R.id.tv_middle)
+    TextView tv_middle;
+    @Bind(R.id.tv_heavy)
+    TextView tv_heavy;
+    @Bind(R.id.rl_light)
+    RelativeLayout  rl_light;
+    @Bind(R.id.rl_middle)
+    RelativeLayout  rl_middle;
+    @Bind(R.id.rl_heavy)
+    RelativeLayout  rl_heavy;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -53,6 +73,7 @@ public class ReportWork extends BaseAcitvity  {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+        Api.getWorkType();
         initData();
         gv_light.setAdapter(new WorkAdapter(lightWork));
         gv_middle.setAdapter(new WorkAdapter(middleWork));
@@ -100,6 +121,54 @@ public class ReportWork extends BaseAcitvity  {
         readyGo(ReportHeight.class);
     }
 
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+                if (object!=null){
+                    if (action==Action.GET_WORK_TYPE){
+                        WorkDataFromService  jobdata= (WorkDataFromService) object;
+                        if (jobdata.getCode().equals("000000")){
+                            joblist= jobdata.getList();
+                          switch (joblist.size()){
+                              case 0:
+                                  rl_light.setVisibility(View.VISIBLE);
+//                                  rl_middle.setVisibility(View.INVISIBLE);
+//                                  rl_heavy.setVisibility(View.INVISIBLE);
+                                  gv_light.setVisibility(View.VISIBLE);
+                                  tv_light.setText(joblist.get(0).getDictName());
+                                  break;
+                              case 1:
+                                  rl_light.setVisibility(View.VISIBLE);
+                                  rl_middle.setVisibility(View.VISIBLE);
+//                                  rl_heavy.setVisibility(View.INVISIBLE);
+                                  gv_light.setVisibility(View.VISIBLE);
+                                  gv_middle.setVisibility(View.VISIBLE);
+
+                                  tv_light.setText(joblist.get(0).getDictName());
+                                  tv_middle.setText(joblist.get(1).getDictName());
+                                  break;
+                              case 2:
+                                  rl_light.setVisibility(View.VISIBLE);
+                                  rl_middle.setVisibility(View.VISIBLE);
+                                  rl_heavy.setVisibility(View.VISIBLE);
+                                  gv_light.setVisibility(View.VISIBLE);
+                                  gv_middle.setVisibility(View.VISIBLE);
+                                  gv_heavy.setVisibility(View.VISIBLE);
+                                  tv_light.setText(joblist.get(0).getDictName());
+                                  tv_middle.setText(joblist.get(1).getDictName());
+                                  tv_heavy.setText(joblist.get(2).getDictName());
+                                  break;
+                          }
+
+                        }
+                    }
+
+                }
+    }
 
 
     private class WorkAdapter extends BaseAdapter {

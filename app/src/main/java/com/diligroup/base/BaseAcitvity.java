@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.diligroup.R;
 import com.diligroup.net.NetChangeObserver;
 import com.diligroup.net.NetStateReceiver;
+import com.diligroup.net.RequestManager;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.ButterKnife;
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Kevin on 2016/6/14.
  */
-public abstract class BaseAcitvity extends AppCompatActivity {
+public abstract class BaseAcitvity extends AppCompatActivity implements RequestManager.ResultCallback {
 //    @Bind(R.id.comm_title)
     public   TextView tv_title;
 //    Context mContext = null;

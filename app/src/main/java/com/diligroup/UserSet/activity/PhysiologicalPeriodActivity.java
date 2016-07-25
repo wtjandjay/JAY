@@ -27,6 +27,7 @@ import android.widget.ViewFlipper;
 import com.diligroup.R;
 import com.diligroup.UserSet.calendar.CalendarAdapter;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.DateUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
@@ -38,6 +39,7 @@ import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import okhttp3.Request;
 
 /**
  * 上报生理周期
@@ -383,6 +385,16 @@ public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.On
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 
     private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {

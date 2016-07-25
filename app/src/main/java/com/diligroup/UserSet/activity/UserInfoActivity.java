@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.OnClick;
 import me.nereo.multi_image_selector.MultiImageSelector;
+import okhttp3.Request;
 
 /**
  * Created by Kevin on 2016/6/14.
@@ -212,4 +214,13 @@ public class UserInfoActivity extends BaseAcitvity {
         }
     }
 
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
+    }
 }

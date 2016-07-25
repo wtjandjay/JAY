@@ -26,7 +26,7 @@ import okhttp3.Request;
 /**
  * 注册
  */
-public class RegistActivity extends BaseAcitvity implements RequestManager.ResultCallback {
+public class RegistActivity extends BaseAcitvity  {
 
     @Bind(R.id.input_phone)
     EditText et_phone;

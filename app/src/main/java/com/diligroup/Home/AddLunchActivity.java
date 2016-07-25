@@ -8,10 +8,12 @@ import android.view.WindowManager;
 import com.diligroup.Home.adapter.AddLunchAdapter;
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.view.PagerSlidingTabStrip;
 
 import butterknife.Bind;
+import okhttp3.Request;
 
 /**
  * Created by hjf on 2016/7/13.
@@ -74,6 +76,16 @@ public class AddLunchActivity extends BaseAcitvity {
         vPager.setAdapter(adapter);
         pstTabstrip.setViewPager(vPager);
         vPager.setCurrentItem(0);
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 }

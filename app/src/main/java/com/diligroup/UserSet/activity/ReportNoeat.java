@@ -7,11 +7,14 @@ import android.widget.RadioGroup;
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
 import com.diligroup.bean.UserInfoBean;
+import com.diligroup.net.Action;
+import com.diligroup.net.Api;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.Bind;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /***
  * 食物禁忌上报
@@ -57,7 +60,7 @@ public class ReportNoeat extends BaseAcitvity implements RadioGroup.OnCheckedCha
     @Override
     protected void initViewAndData() {
         isShowBack(true);
-
+        Api.getNoEatFood();
     }
 
 
@@ -88,6 +91,18 @@ public class ReportNoeat extends BaseAcitvity implements RadioGroup.OnCheckedCha
 
                 break;
 
+
+        }
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+        if (object!=null){
 
         }
     }

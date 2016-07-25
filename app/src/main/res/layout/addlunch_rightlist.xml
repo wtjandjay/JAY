@@ -63,7 +63,7 @@
                 android:paddingTop="2dp"
                 android:singleLine="true"
                 android:text="菜品评价"
-                android:textColor="#ff5252"
+                android:textColor="#ff6633"
                 android:textSize="11sp" />
         </LinearLayout>
     </RelativeLayout>

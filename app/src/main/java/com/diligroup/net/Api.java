@@ -134,11 +134,66 @@ public class Api {
     /**
      * 修改用户信息
      */
-    public  static  void updataUserInfo(){
+    public  static  void updataUserInfo(RequestManager.ResultCallback callback){
         Map<String, String> map = new HashMap<>();
         map.put("transCode", TransCode.updataUserInfos);
         map.put("type", "update");
         map.put("type", "update");
+        RequestManager.getInstance().postAsync(Action.REPORT_USERINFOS,map,callback);
+
+    }
+    /**
+     * 获取职业信息分类
+     */
+    public static void getWorkType(RequestManager.ResultCallback callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GetWorkType);
+        map.put("type", "findAll");
+        map.put("status", "1");
+        RequestManager.getInstance().postAsync(Action.GET_WORK_TYPE,map,callback);
+
+    }
+    /**
+     * P获取 饮食禁忌 食物 list
+     */
+    public static void getNoEatFood(RequestManager.ResultCallback callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GET_NOEAT_FOOD);
+        map.put("type", "findAll");
+        map.put("dictType","26");
+//        map.put("currentPage", "1");
+        map.put("status", "1");
+//        map.put("pageSize", "10");
+        RequestManager.getInstance().postAsync(Action.GET_NO_EAT,map,callback);
+
+
+    }
+    /**
+     * 获取 过敏食材
+     */
+    public static void getAllergyFood(RequestManager.ResultCallback  callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GET_ALLERGY_FOOD);
+        map.put("type", "findAll");
+        map.put("dictType","7");
+        map.put("currentPage", "1");
+//        map.put("status", "1");
+        map.put("pageSize", "10");
+        RequestManager.getInstance().postAsync(Action.GET_ALLERGY,map,callback);
+
+    }
+    /**
+     * 获取 特殊人群
+     */
+    public static void getSpecial(RequestManager.ResultCallback  callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GET_SPECIAL);
+        map.put("type", "findAll");
+        map.put("dictType","20");
+        map.put("currentPage", "1");
+//        map.put("status", "1");
+        map.put("pageSize", "10");
+        RequestManager.getInstance().postAsync(Action.GET_SPECIAL,map,callback);
 
     }
 }

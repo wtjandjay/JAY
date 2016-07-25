@@ -6,11 +6,13 @@ import android.widget.EditText;
 
 import com.diligroup.R;
 import com.diligroup.base.BaseAcitvity;
+import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.techery.properratingbar.ProperRatingBar;
+import okhttp3.Request;
 
 /**
  * 服务评价页面
@@ -53,5 +55,15 @@ public class ServiceActivity extends BaseAcitvity {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
+
     }
 }

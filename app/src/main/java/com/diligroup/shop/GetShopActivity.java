@@ -28,6 +28,7 @@ import com.diligroup.base.Constant;
 import com.diligroup.base.DiliApplication;
 import com.diligroup.bean.ShopInfosBean;
 import com.diligroup.bean.UserLocationBean;
+import com.diligroup.net.Action;
 import com.diligroup.other.LocationService;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
@@ -38,6 +39,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import okhttp3.Request;
 
 /**
  * 根据位置获取 附近门店 list
@@ -209,6 +211,16 @@ public class GetShopActivity extends BaseAcitvity implements CloudListener, BDLo
 
     @Override
     public void onGetDetailSearchResult(DetailSearchResult detailSearchResult, int i) {
+
+    }
+
+    @Override
+    public void onError(Request request, Action action, Exception e) {
+
+    }
+
+    @Override
+    public void onResponse(Request request, Action action, Object object) {
 
     }
 

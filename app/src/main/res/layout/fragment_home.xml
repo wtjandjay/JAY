@@ -138,7 +138,7 @@
         android:layout_width="120dp"
         android:layout_height="2dp"
         android:background="@drawable/green_tabline" />
-
+    <include layout="@layout/line_view"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -166,7 +166,7 @@
                 android:src="@drawable/iv_go_more" />
         </LinearLayout>
     </LinearLayout>
-
+    <include layout="@layout/line_view"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="7dp"
