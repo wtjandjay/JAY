@@ -159,11 +159,14 @@
     </GridView>
 
     <Button
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/white"
         android:id="@+id/bt_commit_work"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="@drawable/em_button_login_bg"
-        android:text="OK" />
+        android:text="确定" />
 </LinearLayout>

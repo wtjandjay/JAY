@@ -4,14 +4,12 @@ package com.diligroup.login;
 import android.text.TextUtils;
 import android.widget.EditText;
 
-import com.baidu.mapapi.map.Text;
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.CommonBean;
 import com.diligroup.bean.ProvingCodeBean;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
-import com.diligroup.net.RequestManager;
 import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
@@ -26,7 +24,7 @@ import okhttp3.Request;
 /**
  * 注册
  */
-public class RegistActivity extends BaseAcitvity  {
+public class RegistActivity extends BaseActivity {
 
     @Bind(R.id.input_phone)
     EditText et_phone;

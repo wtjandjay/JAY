@@ -21,7 +21,7 @@ import com.diligroup.Before.fragment.BeforeFragment;
 import com.diligroup.Home.fragment.HomeFragment;
 import com.diligroup.R;
 import com.diligroup.UserSet.fragment.UserSetFragment;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.EventBusBean;
 import com.diligroup.dialog.RotateShowProgressDialog;
 import com.diligroup.net.Action;
@@ -42,7 +42,7 @@ import butterknife.Bind;
 import me.nereo.multi_image_selector.MultiImageSelector;
 import okhttp3.Request;
 
-public class HomeActivity extends BaseAcitvity {
+public class HomeActivity extends BaseActivity {
 
 
     private static final int REQUEST_IMAGE = 2;

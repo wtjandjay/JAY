@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
@@ -30,8 +30,8 @@ import okhttp3.Request;
  * Created by Kevin on 2016/6/14.
  * 用户信息详情
  */
-public class UserInfoActivity extends BaseAcitvity {
-    //    @Bind(R.id.rl_sex)
+public class UserInfoActivity extends BaseActivity {
+//    @Bind(R.id.rl_sex)
 //    RelativeLayout rl_sex;
 //    @Bind(R.id.rl_birthday)
 //    RelativeLayout rl_birthday;

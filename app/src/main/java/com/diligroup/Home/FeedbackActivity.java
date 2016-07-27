@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
@@ -19,7 +19,7 @@ import okhttp3.Request;
 /**
  * 菜品和性价比评价页面
  */
-public class FeedbackActivity extends BaseAcitvity implements View.OnClickListener {
+public class FeedbackActivity extends BaseActivity implements View.OnClickListener {
 
 
     @Bind(R.id.dishes_name)

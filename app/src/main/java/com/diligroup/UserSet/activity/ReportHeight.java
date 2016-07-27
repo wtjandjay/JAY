@@ -3,10 +3,9 @@ package com.diligroup.UserSet.activity;
 import android.util.Log;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.UserInfoBean;
 import com.diligroup.net.Action;
-import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 import com.diligroup.view.WheelView;
@@ -20,7 +19,7 @@ import okhttp3.Request;
 /**
  * 上报身高
  */
-public class ReportHeight extends BaseAcitvity {
+public class ReportHeight extends BaseActivity {
     @Bind(R.id.wv_height)
     WheelView wheelView;
     String selectHeight;

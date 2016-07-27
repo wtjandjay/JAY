@@ -1,7 +1,7 @@
 package com.diligroup.shop;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
@@ -12,7 +12,7 @@ import okhttp3.Request;
  * 用户手动 选择 门店地址
  * Created by Kevin on 2016/7/11.
  */
-public class SelectShopByUser extends BaseAcitvity {
+public class SelectShopByUser extends BaseActivity {
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.select_shop;

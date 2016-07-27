@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/7/25.
  */
-public class NoEatFoodBean extends CommonBean {
+public class NoEatFoodBean<T> extends CommonBean {
 
     /**
      * list : [{"code":"260001","createTime":1469177978705,"creatorId":0,"dictId":246,"dictName":"猪肉类","dictType":"26","isShow":"1","isSpecial":"0","priority":1,"remark":"","status":"1"},{"code":"260002","createTime":1469177978706,"creatorId":0,"dictId":247,"dictName":"水产类","dictType":"26","isShow":"1","isSpecial":"0","priority":1,"remark":"","status":"1"}]
@@ -45,7 +45,7 @@ public class NoEatFoodBean extends CommonBean {
         this.list = list;
     }
 
-    public static class ListBean {
+    public static class ListBean<T> {
         private String code;
         private long createTime;
         private int creatorId;

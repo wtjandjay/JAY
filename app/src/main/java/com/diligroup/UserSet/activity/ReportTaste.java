@@ -1,14 +1,22 @@
 package com.diligroup.UserSet.activity;
 
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.UserSet.TasteAdapter;
+import com.diligroup.base.BaseActivity;
+import com.diligroup.bean.GetTasteBean;
+import com.diligroup.bean.UserInfoBean;
 import com.diligroup.net.Action;
+import com.diligroup.net.Api;
+import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
+import com.diligroup.utils.ToastUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -17,16 +25,18 @@ import okhttp3.Request;
 /**
  * 上报 口味
  */
-public class ReportTaste extends BaseAcitvity {
+public class ReportTaste extends BaseActivity {
     @Bind(R.id.lv_taste)
     ListView lv_taste;
-//    List<String> tasteDatas;
-//
-    @Bind(R.id.bt_ok_taste)
-    Button bt_ok;
-//    String sInfo;
-//    private RadioAdapter adapter;
-    String [] tasteArray;
+    GetTasteBean  tasteBean;
+    TasteAdapter  adapter;
+    TasteAdapter.ViewHolder  holder;
+    private List<String> id_list;
+    List<GetTasteBean.ListBean> tasteBean_list;
+
+//    public ReportTaste(List<String> id_list) {
+//        this.id_list = id_list;
+//    }
 
     @Override
     protected int getContentViewLayoutID() {
@@ -42,6 +52,7 @@ public class ReportTaste extends BaseAcitvity {
     public void setTitle() {
         super.setTitle();
         tv_title.setText("口味");
+        title_infos.setText("请选择您的口味喜好");
     }
 
     @Override
@@ -52,61 +63,43 @@ public class ReportTaste extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
-        getTasteData();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_multiple_choice, tasteArray);
-        lv_taste.setAdapter(adapter);
-        lv_taste.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        Api.getTaste(this);
+        lv_taste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                holder= (TasteAdapter.ViewHolder) view.getTag();
+                holder.cb.toggle();
+                TasteAdapter.getIsSelected().put(position, holder.cb.isChecked());
+                // 调整选定条目
+                if (holder.cb.isChecked()){
+                    ToastUtil.showShort(ReportTaste.this,"Checked"+holder.foodId);
+                    id_list.add(holder.foodId);
+                }else {
+                    ToastUtil.showShort(ReportTaste.this,"UnChecked"+holder.foodId);
+                    removeUnChecked(holder.foodId);
+                }
+                LogUtils.e("taste====="+id_list.toString());
+            }
+        });
     }
-
+    public void removeUnChecked(String foodId) {
+        if (id_list.size()>0){
+            for (int i=0;i<id_list.size();i++){
+                if (id_list.get(i).equals(foodId)){
+                    id_list.remove(foodId);
+                }
+            }
+        }
+    }
     @OnClick(R.id.bt_ok_taste)
-    public void ReportTaste() {
+    public void ReporTaste() {
+        String s=id_list.toString().replaceAll(" ","");
+        String s2= s.substring(1,s.length()-1);
+        ToastUtil.showShort(ReportTaste.this,s2);
+        UserInfoBean.getInstance().setTaste(s2);
+//        readyGo(PhysiologicalPeriodActivity.class);
 
-        long[] authorsId = getListSelectededItemIds(lv_taste);
-        String name = "";
-        String message;
-        if (authorsId.length > 0) {
-            // 用户至少选择了一ge
-            for (int i = 0; i < authorsId.length; i++) {
-                name += "," + tasteArray[(int) authorsId[i]];
-            }
-            // 
-            message = name.substring(1);
-        } else {
-            message = "请至少选择一个";
-        }
-        Toast.makeText(ReportTaste.this, message, Toast.LENGTH_LONG)
-                .show();
     }
-    // 避免使用getCheckItemIds()方法
-    public long[] getListSelectededItemIds(ListView listView) {
-
-        long[] ids = new long[listView.getCount()];//getCount()即获取到ListView所包含的item总个数
-        //定义用户选中Item的总个数
-        int checkedTotal = 0;
-        for (int i = 0; i < listView.getCount(); i++) {
-            //如果这个Item是被选中的
-            if (listView.isItemChecked(i)) {
-                ids[checkedTotal++] = i;
-            }
-        }
-
-        if (checkedTotal < listView.getCount()) {
-            //定义选中的Item的ID数组
-            final long[] selectedIds = new long[checkedTotal];
-            //数组复制 ids
-            System.arraycopy(ids, 0, selectedIds, 0, checkedTotal);
-            return selectedIds;
-        } else {
-            //用户将所有的Item都选了
-            return ids;
-        }
-    }
-    private void getTasteData() {
-
-       tasteArray=new String[]{"酸","甜","苦","辣","咸","其他"};
-    }
-
     @Override
     public void onError(Request request, Action action, Exception e) {
 
@@ -114,6 +107,12 @@ public class ReportTaste extends BaseAcitvity {
 
     @Override
     public void onResponse(Request request, Action action, Object object) {
-
+        if (object!=null&&action==Action.GET_TASTE){
+            tasteBean= (GetTasteBean) object;
+            id_list=new ArrayList<>();
+            tasteBean_list = tasteBean.getList();
+             adapter = new TasteAdapter(this,tasteBean_list);
+            lv_taste.setAdapter(adapter);
+        }
     }
 }

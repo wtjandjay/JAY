@@ -3,10 +3,9 @@ package com.diligroup.UserSet.activity;
 import android.widget.DatePicker;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.UserInfoBean;
 import com.diligroup.net.Action;
-import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
@@ -19,7 +18,7 @@ import okhttp3.Request;
 /**
  * 上报 生日
  */
-public class ReportBirthday extends BaseAcitvity {
+public class ReportBirthday extends BaseActivity {
 
     @Bind(R.id.data_select)
     DatePicker data_select;

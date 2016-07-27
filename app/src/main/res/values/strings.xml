@@ -6,10 +6,10 @@
     <string name="home">首页</string>
     <string name="action_sign_in">登录</string>
     <!--<string-array name="gulei">-->
-        <!--　	<item>小麦</item>-->
-        <!--　　<item>大麦</item>-->
-        <!--　　<item>荞麦</item>-->
-        <!--　　<item>玉米</item>-->
+    <!--　	<item>小麦</item>-->
+    <!--　　<item>大麦</item>-->
+    <!--　　<item>荞麦</item>-->
+    <!--　　<item>玉米</item>-->
     <!--</string-array>-->
 
     <string name="error_no_permission">无权限</string>

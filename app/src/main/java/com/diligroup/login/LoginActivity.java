@@ -8,12 +8,10 @@ import android.widget.ProgressBar;
 import com.diligroup.Home.HomeActivity;
 import com.diligroup.R;
 import com.diligroup.UserSet.activity.ReportSex;
-import com.diligroup.base.BaseAcitvity;
-import com.diligroup.bean.CommonBean;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.UserBeanFromService;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
-import com.diligroup.net.RequestManager;
 import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
@@ -27,7 +25,7 @@ import okhttp3.Request;
 /**
  * 登录 Activity
  */
-public class LoginActivity extends BaseAcitvity  {
+public class LoginActivity extends BaseActivity {
     @Bind(R.id.input_username)
     AutoCompleteTextView phoneNumber;
     @Bind(R.id.input_password)

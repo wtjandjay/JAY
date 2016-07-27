@@ -2,8 +2,10 @@ package com.diligroup.net;
 
 import com.diligroup.bean.CommonBean;
 import com.diligroup.bean.GetAllergyBean;
+import com.diligroup.bean.GetHistoryBean;
+import com.diligroup.bean.GetJobBean;
 import com.diligroup.bean.GetSpecialBean;
-import com.diligroup.bean.GetWorkTypeBean;
+import com.diligroup.bean.GetTasteBean;
 import com.diligroup.bean.NoEatFoodBean;
 import com.diligroup.bean.ProvingCodeBean;
 import com.diligroup.bean.UserBeanFromService;
@@ -31,7 +33,9 @@ public enum Action {
     GET_NO_EAT(Urls.GET_NO_EAT),
     GET_ALLERGY(Urls.GET_ALLERGY),
     GET_OTHER(Urls.BASE),
-    GET_SPECIAL(Urls.BASE);
+    GET_SPECIAL(Urls.BASE),
+    GET_TASTE(Urls.BASE),
+    GET_HISTORY(Urls.BASE);
     /**
      * 根据Action获取解析类
      *
@@ -55,7 +59,7 @@ public enum Action {
             case REPORT_USERINFOS:
                 return CommonBean.class;
             case GET_WORK_TYPE:
-                return GetWorkTypeBean.class;
+                return GetJobBean.class;
             case GET_NO_EAT:
                 return NoEatFoodBean.class;
             case GET_ALLERGY:
@@ -64,6 +68,10 @@ public enum Action {
                 return  CommonBean.class;
             case GET_SPECIAL:
                 return GetSpecialBean.class;
+            case GET_TASTE:
+                return GetTasteBean.class;
+            case GET_HISTORY:
+                return GetHistoryBean.class;
         }
         return null;
     }

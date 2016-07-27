@@ -26,7 +26,7 @@ import android.widget.ViewFlipper;
 
 import com.diligroup.R;
 import com.diligroup.UserSet.calendar.CalendarAdapter;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.DateUtils;
 import com.diligroup.utils.NetUtils;
@@ -44,7 +44,7 @@ import okhttp3.Request;
 /**
  * 上报生理周期
  */
-public class PhysiologicalPeriodActivity extends BaseAcitvity implements View.OnClickListener {
+public class PhysiologicalPeriodActivity extends BaseActivity implements View.OnClickListener {
     @Bind(R.id.currentMonth)
     TextView currentMonth;
     /**

@@ -1,13 +1,13 @@
 package com.diligroup.UserSet.activity;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
 import okhttp3.Request;
 
-public class ReportOther extends BaseAcitvity {
+public class ReportOther extends BaseActivity {
 
 //    @Bind(R.id.comm_title)
 //    TextView tv_ttle;

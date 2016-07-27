@@ -1,7 +1,7 @@
 package com.diligroup.Home;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
@@ -13,7 +13,7 @@ import okhttp3.Request;
  *
  *
  */
-public class FoodDetailsActivity extends BaseAcitvity {
+public class FoodDetailsActivity extends BaseActivity {
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_food_details;

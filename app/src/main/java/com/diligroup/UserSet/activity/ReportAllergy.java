@@ -1,24 +1,20 @@
 package com.diligroup.UserSet.activity;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
+import com.diligroup.bean.GetFoodTypeBean;
 import com.diligroup.net.Action;
+import com.diligroup.net.Api;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 import com.diligroup.view.FlowLayout;
@@ -26,10 +22,8 @@ import com.diligroup.view.TagAdapter;
 import com.diligroup.view.TagFlowLayout;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import butterknife.Bind;
@@ -39,7 +33,7 @@ import okhttp3.Request;
 /**
  * 上报 过敏 食材
  */
-public class ReportAllergy extends BaseAcitvity {
+public class ReportAllergy extends BaseActivity {
 
     @Bind(R.id.list_foods_detail)
     ListView food_list;
@@ -76,16 +70,12 @@ public class ReportAllergy extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
+        Api.getAllergyFood(this);
         mInflater = LayoutInflater.from(ReportAllergy.this);
-        food_details = new String[]{};
-        food_details = getResources().getStringArray(R.array.gulei);
+        initData();
+
         adapter = new FoodAdapter(this, food_details);
         food_list.setAdapter(adapter);
-        list_selected = new ArrayList<>();
-
-        list_selected.add("Curry");
-
-
         tagAdapter = new TagAdapter(list_selected) {
             @Override
             public View getView(FlowLayout parent, int position, Object o) {
@@ -103,6 +93,18 @@ public class ReportAllergy extends BaseAcitvity {
         taglayout.setAdapter(tagAdapter);
     }
 
+    private void initData() {
+        food_details = new String[]{};
+        food_details = getResources().getStringArray(R.array.gulei);
+
+        list_selected = new ArrayList<>();
+        list_selected.add("Curry");
+        list_selected.add("Curry");
+        list_selected.add("Curry");
+        list_selected.add("Curry");
+        list_selected.add("Curry");
+    }
+
     @Override
     public void onError(Request request, Action action, Exception e) {
 
@@ -110,7 +112,9 @@ public class ReportAllergy extends BaseAcitvity {
 
     @Override
     public void onResponse(Request request, Action action, Object object) {
-
+        if (object!=null&&action==Action.GET_ALLERGY){
+            GetFoodTypeBean  foodTypeBean= (GetFoodTypeBean) object;
+        }
     }
 
     private class FoodAdapter extends BaseAdapter {

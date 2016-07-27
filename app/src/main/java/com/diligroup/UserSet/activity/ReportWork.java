@@ -9,16 +9,17 @@ import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.baidu.platform.comapi.map.E;
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
+import com.diligroup.bean.GetJobBean;
 import com.diligroup.bean.UserInfoBean;
-import com.diligroup.bean.WorkDataFromService;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
-import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -29,11 +30,11 @@ import okhttp3.Request;
  * 上报  职业
  * Created by Kevin on 2016/6/16.
  */
-public class ReportWork extends BaseAcitvity {
+public class ReportWork extends BaseActivity {
 
-    private String[] lightWork;
-    private String[] middleWork;
-    private String[] heavyWork;
+//    private String[] lightWork;
+//    private String[] middleWork;
+//    private String[] heavyWork;
     private String userSelect;
     @Bind(R.id.gv_light)
     GridView gv_light;
@@ -41,7 +42,6 @@ public class ReportWork extends BaseAcitvity {
     GridView gv_middle;
     @Bind(R.id.gv_heavy)
     GridView gv_heavy;
-    List<WorkDataFromService.ListBean>  joblist;
     @Bind(R.id.tv_light)
     TextView tv_light;
     @Bind(R.id.tv_middle)
@@ -54,7 +54,10 @@ public class ReportWork extends BaseAcitvity {
     RelativeLayout  rl_middle;
     @Bind(R.id.rl_heavy)
     RelativeLayout  rl_heavy;
-
+    List<GetJobBean.QlistBean>  light_list;
+    List<GetJobBean.ZlistBean>  middle_list;
+    List<GetJobBean.WlistBean>  heavy_list;
+    List<String>  jobName;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_select_work;
@@ -73,38 +76,38 @@ public class ReportWork extends BaseAcitvity {
     @Override
     protected void initViewAndData() {
         isShowBack(true);
-        Api.getWorkType();
-        initData();
-        gv_light.setAdapter(new WorkAdapter(lightWork));
-        gv_middle.setAdapter(new WorkAdapter(middleWork));
-        gv_heavy.setAdapter(new WorkAdapter(heavyWork));
+        Api.getWorkType(this);
+//        initData();
+        jobName=new ArrayList<>();
+//        gv_middle.setAdapter(new WorkAdapter(middleWork));
+//        gv_heavy.setAdapter(new WorkAdapter(heavyWork));
         gv_light.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                userSelect=lightWork[position];
+//                userSelect=lightWork[position];
             }
         });
         gv_middle.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                userSelect=middleWork[position];
+//                userSelect=middleWork[position];
 
             }
         });
         gv_heavy.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                userSelect=heavyWork[position];
+//                userSelect=heavyWork[position];
 
             }
         });
     }
 
-    private void initData() {
-        heavyWork = getResources().getStringArray(R.array.heavy);
-        middleWork =getResources().getStringArray(R.array.middle);
-        lightWork = getResources().getStringArray(R.array.light);
-    }
+//    private void initData() {
+//        heavyWork = getResources().getStringArray(R.array.heavy);
+//        middleWork =getResources().getStringArray(R.array.middle);
+//        lightWork = getResources().getStringArray(R.array.light);
+//    }
 
     @Override
     public void setTitle() {
@@ -115,7 +118,6 @@ public class ReportWork extends BaseAcitvity {
 
     @OnClick(R.id.bt_commit_work)
     public void reportWorkData() {
-
         ToastUtil.showLong(this, "You  work ====" + userSelect);
         UserInfoBean.getInstance().setJob(userSelect);
         readyGo(ReportHeight.class);
@@ -128,60 +130,66 @@ public class ReportWork extends BaseAcitvity {
 
     @Override
     public void onResponse(Request request, Action action, Object object) {
-                if (object!=null){
-                    if (action==Action.GET_WORK_TYPE){
-                        WorkDataFromService  jobdata= (WorkDataFromService) object;
+                if (object!=null&&action==Action.GET_WORK_TYPE){
+                        GetJobBean jobdata= (GetJobBean) object;
                         if (jobdata.getCode().equals("000000")){
-                            joblist= jobdata.getList();
-                          switch (joblist.size()){
-                              case 0:
-                                  rl_light.setVisibility(View.VISIBLE);
-//                                  rl_middle.setVisibility(View.INVISIBLE);
-//                                  rl_heavy.setVisibility(View.INVISIBLE);
-                                  gv_light.setVisibility(View.VISIBLE);
-                                  tv_light.setText(joblist.get(0).getDictName());
-                                  break;
-                              case 1:
-                                  rl_light.setVisibility(View.VISIBLE);
-                                  rl_middle.setVisibility(View.VISIBLE);
-//                                  rl_heavy.setVisibility(View.INVISIBLE);
-                                  gv_light.setVisibility(View.VISIBLE);
-                                  gv_middle.setVisibility(View.VISIBLE);
-
-                                  tv_light.setText(joblist.get(0).getDictName());
-                                  tv_middle.setText(joblist.get(1).getDictName());
-                                  break;
-                              case 2:
-                                  rl_light.setVisibility(View.VISIBLE);
-                                  rl_middle.setVisibility(View.VISIBLE);
-                                  rl_heavy.setVisibility(View.VISIBLE);
-                                  gv_light.setVisibility(View.VISIBLE);
-                                  gv_middle.setVisibility(View.VISIBLE);
-                                  gv_heavy.setVisibility(View.VISIBLE);
-                                  tv_light.setText(joblist.get(0).getDictName());
-                                  tv_middle.setText(joblist.get(1).getDictName());
-                                  tv_heavy.setText(joblist.get(2).getDictName());
-                                  break;
-                          }
-
+                            if (jobdata.getQlist()!=null&&jobdata.getQlist().size()>0){
+                                light_list=jobdata.getQlist();
+                                rl_light.setVisibility(View.VISIBLE);
+                                gv_light.setVisibility(View.VISIBLE);
+                                tv_light.setText("轻体力");
+                                getLightJob(light_list);
+                                gv_light.setAdapter(new WorkAdapter(jobName));
+                            }
+                            if (jobdata.getZlist()!=null&&jobdata.getZlist().size()>0){
+                                middle_list=jobdata.getZlist();
+                                rl_middle.setVisibility(View.VISIBLE);
+                                gv_middle.setVisibility(View.VISIBLE);
+                                tv_light.setText("中等体力");
+                                getMiddleJob(middle_list);
+                                gv_light.setAdapter(new WorkAdapter(jobName));
+                            }
+                            if (jobdata.getWlist()!=null&&jobdata.getWlist().size()>0){
+                                heavy_list=jobdata.getWlist();
+                                rl_heavy.setVisibility(View.VISIBLE);
+                                gv_heavy.setVisibility(View.VISIBLE);
+                                tv_heavy.setText("重体力");
+                                getHeavyJob(heavy_list);
+                                gv_light.setAdapter(new WorkAdapter(jobName));
+                            }
                         }
-                    }
+
 
                 }
     }
 
+    private void getLightJob(List<GetJobBean.QlistBean> list) {
+        for (int i=0;i<list.size();i++){
+            jobName.add(list.get(i).getProfName());
+        }
+    }
+    private void getMiddleJob(List<GetJobBean.ZlistBean> list) {
+        for (int i=0;i<list.size();i++){
+            jobName.add(list.get(i).getProfName());
+        }
+    } private void getHeavyJob(List<GetJobBean.WlistBean> list) {
+        for (int i=0;i<list.size();i++){
+            jobName.add(list.get(i).getProfName());
+        }
+    }
 
     private class WorkAdapter extends BaseAdapter {
         LayoutInflater mInflater;
-        String[] work_array;
+        List<String> listJob;
 
         @Override
         public int getCount() {
-            return work_array.length;
+            return listJob.size();
         }
 
-        WorkAdapter(String[] array) {
-            this.work_array = array;
+        WorkAdapter(List<String> jobList) {
+
+            this.listJob = jobList;
             mInflater = LayoutInflater.from(ReportWork.this);
 
         }
@@ -207,7 +215,7 @@ public class ReportWork extends BaseAcitvity {
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
-            holder.tv_work.setText(work_array[position]);
+            holder.tv_work.setText(listJob.get(position));
             return convertView;
         }
     }

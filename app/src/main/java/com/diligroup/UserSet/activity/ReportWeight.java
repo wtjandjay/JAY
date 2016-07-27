@@ -1,11 +1,9 @@
 package com.diligroup.UserSet.activity;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.UserInfoBean;
 import com.diligroup.net.Action;
-import com.diligroup.other.ReportUserInfos;
-import com.diligroup.utils.LogUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 import com.diligroup.view.WheelView;
@@ -19,7 +17,7 @@ import okhttp3.Request;
 /**
  * 上报体重
  */
-public class ReportWeight extends BaseAcitvity {
+public class ReportWeight extends BaseActivity {
     @Bind(R.id.wheel_weight)
     WheelView wheelView;
     String select_weight;

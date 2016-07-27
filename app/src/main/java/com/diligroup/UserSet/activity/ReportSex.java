@@ -1,12 +1,9 @@
 package com.diligroup.UserSet.activity;
 
-import android.view.KeyEvent;
-
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.UserInfoBean;
 import com.diligroup.net.Action;
-import com.diligroup.other.ReportUserInfos;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.ToastUtil;
 
@@ -16,7 +13,7 @@ import okhttp3.Request;
 /**
  * 上报性别
  */
-public class ReportSex extends BaseAcitvity {
+public class ReportSex extends BaseActivity {
 
     private int sexMark;
     @Override

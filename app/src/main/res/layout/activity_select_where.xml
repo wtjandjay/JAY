@@ -7,7 +7,9 @@
     <include
         layout="@layout/comm_title"
         />
-
+    <include
+        layout="@layout/title_info"
+        />
     <com.diligroup.view.CityPicker
         android:layout_weight="6"
         android:id="@+id/select_where"

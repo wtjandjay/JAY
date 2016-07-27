@@ -148,8 +148,8 @@ public class Api {
     public static void getWorkType(RequestManager.ResultCallback callback){
         Map<String, String> map = new HashMap<>();
         map.put("transCode", TransCode.GetWorkType);
-        map.put("type", "findAll");
-        map.put("status", "1");
+        map.put("type", "findAll1");
+//        map.put("status", "1");
         RequestManager.getInstance().postAsync(Action.GET_WORK_TYPE,map,callback);
 
     }
@@ -160,7 +160,7 @@ public class Api {
         Map<String, String> map = new HashMap<>();
         map.put("transCode", TransCode.GET_NOEAT_FOOD);
         map.put("type", "findAll");
-        map.put("dictType","26");
+        map.put("dictType","4");
 //        map.put("currentPage", "1");
         map.put("status", "1");
 //        map.put("pageSize", "10");
@@ -174,13 +174,28 @@ public class Api {
     public static void getAllergyFood(RequestManager.ResultCallback  callback){
         Map<String, String> map = new HashMap<>();
         map.put("transCode", TransCode.GET_ALLERGY_FOOD);
+        map.put("type", "findAllAllergy");
+//        map.put("dictType","7");
+//        map.put("currentPage", "1");
+////        map.put("status", "1");
+//        map.put("pageSize", "10");
+        RequestManager.getInstance().postAsync(Action.GET_ALLERGY,map,callback);
+
+    }
+
+    /**
+     * 获取 口味列表
+     * @param callback
+     */
+    public static void getTaste(RequestManager.ResultCallback callback){
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GET_TASTE);
         map.put("type", "findAll");
         map.put("dictType","7");
         map.put("currentPage", "1");
 //        map.put("status", "1");
         map.put("pageSize", "10");
-        RequestManager.getInstance().postAsync(Action.GET_ALLERGY,map,callback);
-
+        RequestManager.getInstance().postAsync(Action.GET_TASTE,map,callback);
     }
     /**
      * 获取 特殊人群
@@ -195,5 +210,20 @@ public class Api {
         map.put("pageSize", "10");
         RequestManager.getInstance().postAsync(Action.GET_SPECIAL,map,callback);
 
+    }
+
+    /**
+     * 获取健康史 api
+     */
+    public static void getHistory(RequestManager.ResultCallback callback){
+
+        Map<String, String> map = new HashMap<>();
+        map.put("transCode", TransCode.GET_HISTORY);
+        map.put("type", "findAll");
+        map.put("dictType","24");
+        map.put("currentPage", "1");
+//        map.put("status", "1");
+        map.put("pageSize", "10");
+        RequestManager.getInstance().postAsync(Action.GET_HISTORY,map,callback);
     }
 }

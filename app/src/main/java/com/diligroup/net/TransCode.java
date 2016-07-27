@@ -15,9 +15,13 @@ public class TransCode {
     public static String GetWorkType="M0072";
     public static String GET_NOEAT_FOOD="M0038";
 
-    public static String GET_ALLERGY_FOOD="M0038";
+    public static String GET_ALLERGY_FOOD="M0064";
 
     public static String GET_SPECIAL="M0038";
     public static String GET_OTHER="M0038";
+    public static String GET_TASTE="M0038";
+    public static String GET_HISTORY="M0038";
+
+
 
 }

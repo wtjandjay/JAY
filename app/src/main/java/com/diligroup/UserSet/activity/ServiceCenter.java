@@ -1,13 +1,13 @@
 package com.diligroup.UserSet.activity;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
 import okhttp3.Request;
 
-public class ServiceCenter extends BaseAcitvity {
+public class ServiceCenter extends BaseActivity {
     @Override
     public void setTitle() {
         super.setTitle();

@@ -2,7 +2,7 @@ package com.diligroup.UserSet.activity;
 
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
@@ -11,7 +11,7 @@ import okhttp3.Request;
 /**
  * Created by Kevin on 2016/6/21.
  */
-public class SettingActivity extends BaseAcitvity {
+public class SettingActivity extends BaseActivity {
 
     @Override
     protected int getContentViewLayoutID() {

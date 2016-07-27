@@ -7,7 +7,7 @@ import android.view.WindowManager;
 
 import com.diligroup.Home.adapter.AddLunchAdapter;
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.view.PagerSlidingTabStrip;
@@ -19,7 +19,7 @@ import okhttp3.Request;
  * Created by hjf on 2016/7/13.
  * 添加午餐
  */
-public class AddLunchActivity extends BaseAcitvity {
+public class AddLunchActivity extends BaseActivity {
 
     @Bind(R.id.pst_tabstrip)
     PagerSlidingTabStrip pstTabstrip;

@@ -4,12 +4,11 @@ import android.text.TextUtils;
 import android.widget.EditText;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.bean.CommonBean;
 import com.diligroup.bean.ProvingCodeBean;
 import com.diligroup.net.Action;
 import com.diligroup.net.Api;
-import com.diligroup.net.RequestManager;
 import com.diligroup.utils.DigestUtils;
 import com.diligroup.utils.NetUtils;
 import com.diligroup.utils.StringUtils;
@@ -25,7 +24,7 @@ import okhttp3.Request;
  * 忘记密码
  * 修改密码
  */
-public class ModifyPSDActivity extends BaseAcitvity {
+public class ModifyPSDActivity extends BaseActivity {
 
     @Bind(R.id.et_code2)
     EditText et_code;

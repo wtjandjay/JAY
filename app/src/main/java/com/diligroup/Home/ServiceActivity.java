@@ -5,7 +5,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.net.Action;
 import com.diligroup.utils.NetUtils;
 
@@ -17,7 +17,7 @@ import okhttp3.Request;
 /**
  * 服务评价页面
  */
-public class ServiceActivity extends BaseAcitvity {
+public class ServiceActivity extends BaseActivity {
 
     @Bind(R.id.service_evaluation)
     ProperRatingBar serviceEvaluation;

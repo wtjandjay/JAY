@@ -23,7 +23,7 @@ import com.baidu.mapapi.cloud.CloudSearchResult;
 import com.baidu.mapapi.cloud.DetailSearchResult;
 import com.baidu.mapapi.cloud.NearbySearchInfo;
 import com.diligroup.R;
-import com.diligroup.base.BaseAcitvity;
+import com.diligroup.base.BaseActivity;
 import com.diligroup.base.Constant;
 import com.diligroup.base.DiliApplication;
 import com.diligroup.bean.ShopInfosBean;
@@ -45,7 +45,7 @@ import okhttp3.Request;
  * 根据位置获取 附近门店 list
  * Created by Kevin on 2016/7/11.
  */
-public class GetShopActivity extends BaseAcitvity implements CloudListener, BDLocationListener {
+public class GetShopActivity extends BaseActivity implements CloudListener, BDLocationListener {
     private static final String LTAG = GetShopActivity.class.getSimpleName();
     private final int SDK_PERMISSION_REQUEST = 127;
     //    private List<String> list_shop;

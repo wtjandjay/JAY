@@ -3,10 +3,20 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-19</target>
+        <target>android-22</target>
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_work.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/user_setting.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -19,14 +29,289 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="38e53afb-d796-4c32-8e0f-ded3612ae3d4" name="Default" comment="Failed commit: Default">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets/shaders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets/shaders/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets/shaders/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets/shaders/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/assets/shaders/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res/rs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res/rs/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res/rs/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res/rs/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/res/rs/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/aidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/aidl/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/aidl/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/aidl/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/aidl/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug/io/techery/properratingbar/test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/debug/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/debug/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/debug/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/release/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/release/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/release/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io/techery/properratingbar/test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/debug/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/debug/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/debug/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/release/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/release/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/release/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/rs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/rs/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/rs/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/rs/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/rs/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/annotations" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/annotations/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/annotations/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/assets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/assets/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/assets/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest/debug/multi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest/debug/single" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/aapt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/aidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/assets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/jni" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/libs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res/drawable" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res/drawable/my_comments_stars_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res/drawable/my_comments_stars_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res/values" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/aapt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/aidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/assets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/jni" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/libs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res/drawable" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res/drawable/my_comments_stars_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res/drawable/my_comments_stars_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res/values" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/BuildConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/ProperRatingBar$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/ProperRatingBar$SavedState$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/ProperRatingBar$SavedState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/ProperRatingBar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$attr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$dimen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$drawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$id.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$string.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R$styleable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/RatingListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/debug/io/techery/properratingbar/SomeUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/BuildConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/ProperRatingBar$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/ProperRatingBar$SavedState$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/ProperRatingBar$SavedState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/ProperRatingBar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$attr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$dimen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$drawable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$id.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$string.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R$styleable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/RatingListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/classes/release/io/techery/properratingbar/SomeUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/dependency-cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/dependency-cache/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/dependency-cache/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental-safeguard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental-safeguard/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental-safeguard/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileDebugAidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileDebugAidl/dependency.store" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileDebugAndroidTestAidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileDebugAndroidTestAidl/dependency.store" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileReleaseAidl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/compileReleaseAidl/dependency.store" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestAssets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestResources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestShaders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAssets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugJniLibFolders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugShaders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseAssets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseJniLibFolders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseShaders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/packageDebugResources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/packageReleaseResources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/jniLibs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/jniLibs/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/jniLibs/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/lint" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/manifest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/manifest/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/manifest/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/manifest/tmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug/drawable" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug/drawable/my_comments_stars_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug/drawable/my_comments_stars_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug/values" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/androidTest/debug/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/androidTest/debug/obj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/debug/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/debug/obj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/release/lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/rs/release/obj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/shaders" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/shaders/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/shaders/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/shaders/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/shaders/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/symbols" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/symbols/androidTest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/symbols/androidTest/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJavaRes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJavaRes/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJavaRes/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJniLibs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJniLibs/debug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/transforms/mergeJniLibs/release" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/outputs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/outputs/aar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/outputs/aar/ratingbar_library-debug.aar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/outputs/aar/ratingbar_library-release.aar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/tmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/tmp/compileDebugJavaWithJavac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/tmp/compileDebugJavaWithJavac/emptySourcePathRef" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/tmp/compileReleaseJavaWithJavac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/tmp/compileReleaseJavaWithJavac/emptySourcePathRef" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/drawable" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/drawable/my_comments_stars_empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/drawable/my_comments_stars_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/values" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io/techery" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io/techery/properratingbar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/HistoryAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/NoEatAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/SpecialAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/TasteAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAddress.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHistory.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ServiceCenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetWorkTypeBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetAllergyBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetFoodTypeBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetHistoryBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetJobBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetOtherBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetSpecialBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetTasteBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/NoEatFoodBean.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserBeanFromService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/WorkDataFromService.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/other/ReportUserInfos.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_address.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_history.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/kevin_curry.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/left_listview.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/noeat_item.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/right_listview.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/androidTest/debug/io/techery/properratingbar/test/BuildConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/debug/io/techery/properratingbar/BuildConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/buildConfig/release/io/techery/properratingbar/BuildConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io/techery/properratingbar/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/androidTest/debug/io/techery/properratingbar/test/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/debug/io/techery/properratingbar/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/generated/source/r/release/io/techery/properratingbar/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/blame/res/androidTest/debug/single/drawable.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/R.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/aapt/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/debug/res/values/values.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/R.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/aapt/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/bundles/release/res/values/values.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental-safeguard/debug/tag.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental-safeguard/release/tag.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseAssets/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/mergeReleaseShaders/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/packageDebugResources/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/incremental/packageReleaseResources/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/res/merged/androidTest/debug/values/values.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/build/intermediates/symbols/androidTest/debug/R.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/ratingbar_library.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/values/attrs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io/techery/properratingbar/ProperRatingBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io/techery/properratingbar/RatingListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ratingbar_library/src/io/techery/properratingbar/SomeUtils.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/SVNTEST.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/UserSet.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportMinZu.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserCenterView.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_center.xml" afterPath="" />
@@ -42,6 +327,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/AddLunchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/AddLunchActivity.java" />
@@ -49,8 +335,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FoodDetailsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FoodDetailsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/HomeActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/ServiceActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/ServiceActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportBirthday.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportBirthday.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHeight.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHeight.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java" />
@@ -64,7 +348,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/SettingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/SettingActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserInfoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserInfoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/WBShareActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/WBShareActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseAcitvity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseAcitvity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/CommonBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/CommonBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserInfoBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserInfoBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/login/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/login/LoginActivity.java" />
@@ -76,17 +359,32 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Urls.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Urls.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/GetShopActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/GetShopActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/SelectShopByUser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/SelectShopByUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_allergy.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_allergy.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_height.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_height.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_special.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_special.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_taste.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_taste.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_where.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_where.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_work.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_work.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/grid_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/grid_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/title_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/title_info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/array.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseAcitvity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseActivity.java" />
+    </list>
+    <list id="5c150e02-9d28-474c-8e40-0b1cf1faa08e" name="Failed commit: Default" comment="Failed commit: Default">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" />
     </list>
     <ignored path="NewApp.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".gradle/" />
+    <ignored path=".idea/" />
+    <ignored path="gradlew" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" ignored="true" />
+    <file path="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" ignored="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,31 +408,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReportSpecial.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSpecial.java">
+      <file leaf-file-name="PhysiologicalPeriodActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6142857">
-              <caret line="126" column="20" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="448" column="61" selection-start-line="448" selection-start-column="49" selection-end-line="448" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Api.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Api.java">
+      <file leaf-file-name="ReportAllergy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="195" column="58" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
-              <folding />
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+              <folding>
+                <element signature="e#1263#1264#0" expanded="true" />
+                <element signature="e#1318#1319#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Action.java">
+      <file leaf-file-name="activity_report_allergy.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_allergy.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+            <state vertical-scroll-proportion="2.0872483">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,8 +450,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -2594,63 +2899,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/title_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/grid_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/RequestManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_food_details.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/AllergyTagAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/other/ReportUserInfos.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_height.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserInfoBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseViewPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserBeanFromService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetWorkTypeBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseAcitvity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/login/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/login/ModifyPSDActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/login/RegistActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/ServiceActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FoodDetailsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FeedbackActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/AddLunchActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportBirthday.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHeight.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportOther.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSex.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportTaste.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWeight.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWhere.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/SettingActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserInfoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/WorkDataFromService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/GetShopActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/SelectShopByUser.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ServiceCenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_work.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWork.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/NoEatFoodBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetAllergyBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Urls.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetSpecialBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Action.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/TransCode.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetOtherBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Api.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/UserSet.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserInfoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/noeat_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_taste.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/NoEatFoodBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/T.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/ListCheckedAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetTasteBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/TasteAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_report_history.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetHistoryBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/NoEatAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/HistoryAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportTaste.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_special.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/SpecialAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHistory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSpecial.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_where.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_report_address.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAddress.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWhere.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/WorkDataFromService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Action.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWork.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_work.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetJobBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/TransCode.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Api.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetFoodTypeBean.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_report_allergy.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="380" />
+    <option name="y" value="10" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -2774,6 +3079,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2856,7 +3187,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2927,134 +3258,29 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="D:/SDK" />
     <property name="device.picker.selection" value="IJAUFM9DHQD6MZZD" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FlowLayout" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="last_opened_file_path" value="D:/SVN/NewApp" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.diligroup.UserSet.activity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHub\NewApp\app\src\main\res\drawable-xxhdpi" />
       <recent name="E:\GitHub\NewApp\app\src\main\res\drawable-mdpi" />
       <recent name="E:\GitHub\NewApp\app\src\main\res\drawable" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="svn" revision="3197">E:\GitHub\NewApp\app\src\main\res\drawable\backgroud_selector.xml</PATH>
-          <PATH vcs="svn" revision="3197">E:\GitHub\NewApp\app\src\main\res\drawable\kuang_red.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.diligroup.UserSet" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -3334,6 +3560,10 @@
           <option name="myVcsRoot" value="E:\GitHub\NewApp\app" />
           <option name="myCopyRoot" value="E:\GitHub\NewApp\app" />
         </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\GitHub\NewApp\ratingbar_library" />
+          <option name="myCopyRoot" value="E:\GitHub\NewApp\ratingbar_library" />
+        </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
@@ -3341,6 +3571,10 @@
         <SvnCopyRootSimple>
           <option name="myVcsRoot" value="E:\GitHub\NewApp\app" />
           <option name="myCopyRoot" value="E:\GitHub\NewApp\app" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\GitHub\NewApp\ratingbar_library" />
+          <option name="myCopyRoot" value="E:\GitHub\NewApp\ratingbar_library" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -3598,34 +3832,53 @@
       <option name="project" value="LOCAL" />
       <updated>1469179294420</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Failed commit: Default">
+      <created>1469494431042</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1469494431042</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Failed commit: Default">
+      <created>1469494462217</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1469494462217</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Failed commit: Default">
+      <created>1469494594296</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1469494594296</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="380" y="10" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66211605" sideWeight="0.4364599" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.040955633" sideWeight="0.43040848" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5069444" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.80375427" sideWeight="0.22541603" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2337884" sideWeight="0.77458394" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8259386" sideWeight="0.2344932" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07508533" sideWeight="0.7655068" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40443686" sideWeight="0.46369138" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26962456" sideWeight="0.46369138" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6006826" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27836612" sideWeight="0.49305555" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267776" sideWeight="0.49305555" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7696246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3668942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49829352" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3633,7 +3886,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3684,95 +3936,232 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/RequestManager.java</url>
+          <line>531</line>
+          <properties class="com.diligroup.net.RequestManager.ResultCallback" method="onResponse" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FeedbackActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetAllergyBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.28125">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/MyItemClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39375">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetSpecialBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.88125">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/AddLunchActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/NoEatFoodBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        <state vertical-scroll-proportion="-1.0179533">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/fragment/StoreSupplyFragment.java">
+    <entry file="file://D:/SDK/sources/android-23/android/widget/BaseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195877">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.33213645">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/fragment/HomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/fragment/UserSetFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44536084">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state vertical-scroll-proportion="-1.2142857">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/login/LoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_history.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/login/RegistActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195877">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.060402684">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_physiological_period.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_min_zu.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_other.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8582677">
+          <caret line="176" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1259842">
+          <caret line="30" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetTasteBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.060402684">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Urls.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_taste.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1363635">
+          <caret line="31" column="34" selection-start-line="10" selection-start-column="0" selection-end-line="31" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_special.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1417323">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/TasteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="5" selection-start-line="23" selection-start-column="2" selection-end-line="102" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3335#3336#0" expanded="false" />
-            <element signature="e#3396#3397#0" expanded="false" />
-            <element signature="e#8866#9176#0" expanded="false" />
-            <element signature="e#9175#9176#0" expanded="false" />
-            <element signature="e#9220#13472#0" expanded="false" />
-            <element signature="e#13471#13472#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/SpecialAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.3020134">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1457#1458#0" expanded="false" />
-            <element signature="e#1512#1513#0" expanded="false" />
-            <element signature="e#2662#2663#0" expanded="false" />
-            <element signature="e#2720#2721#0" expanded="false" />
-            <element signature="e#3395#3396#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="false" />
-            <element signature="e#3507#3508#0" expanded="false" />
-            <element signature="e#3546#3547#0" expanded="false" />
-            <element signature="e#3611#3612#0" expanded="false" />
-            <element signature="e#3650#3651#0" expanded="false" />
-            <element signature="e#4364#5231#0" expanded="false" />
-            <element signature="e#5230#5231#0" expanded="false" />
-            <element signature="e#5929#5930#0" expanded="false" />
-            <element signature="e#5987#5988#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/NoEatAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8791946">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetHistoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3510393">
+          <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/HistoryAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8013856">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2459#2934#0" expanded="false" />
+            <element signature="e#2933#2934#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_history.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5454545">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#1983#2735#0" expanded="true" />
+            <element signature="e#2734#2735#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3780,199 +4169,144 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportBirthday.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-          </folding>
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportOther.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22061856">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="55" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWhere.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSpecial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_address.xml">
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/UserInfoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.0659795">
-          <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportTaste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="53" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/ProvingCodeBean.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWeight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2288659">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/ShopInfosBean.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserInfoBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195877">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/UserBeanFromService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_where.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8886598">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.1363635">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
-            <element signature="e#931#932#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#1210#1462#0" expanded="false" />
+            <element signature="e#1461#1462#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetWorkTypeBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1670103">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/BannerBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27628866">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/MyItemClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38969073">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/EventBusBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195877">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/WorkDataFromService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/Cityinfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="24" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWhere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
           <folding>
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1219#1220#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1341#1342#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-            <element signature="e#1728#1729#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-            <element signature="e#1841#1842#0" expanded="true" />
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1935#1936#0" expanded="true" />
-            <element signature="e#1985#1986#0" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
-            <element signature="e#2196#2197#0" expanded="true" />
-            <element signature="e#2235#2236#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2409#2410#0" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#1045#1295#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/GetShopActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_address.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.636364">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/shop/SelectShopByUser.java">
+    <entry file="file://D:/SDK/sources/android-23/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ServiceCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/FoodDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49315068">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.6772824">
+          <caret line="786" column="28" selection-start-line="786" selection-start-column="28" selection-end-line="786" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -3982,298 +4316,125 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
-          <caret line="147" column="38" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/SDK/sources/android-23/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="777" column="39" selection-start-line="777" selection-start-column="39" selection-end-line="777" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/Home/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_food_details.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.0">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/base/BaseAcitvity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <element signature="e#1722#1740#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5068493">
-          <caret line="118" column="64" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportHeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44520548">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70319635">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/NetStateReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34761906">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/NetChangeObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34761906">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/RequestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.28767">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/AppInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34761906">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/NoEatFoodBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.242857">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-          <folding>
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1738#1739#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1833#1834#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
-            <element signature="e#2013#2014#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2097#2098#0" expanded="true" />
-            <element signature="e#2134#2135#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2531#2532#0" expanded="true" />
-            <element signature="e#2579#2580#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2653#2654#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2745#2746#0" expanded="true" />
-            <element signature="e#2785#2786#0" expanded="true" />
-            <element signature="e#2825#2826#0" expanded="true" />
-            <element signature="e#2879#2880#0" expanded="true" />
-            <element signature="e#2929#2930#0" expanded="true" />
-            <element signature="e#2965#2966#0" expanded="true" />
-            <element signature="e#3004#3005#0" expanded="true" />
-            <element signature="e#3053#3054#0" expanded="true" />
-            <element signature="e#3101#3102#0" expanded="true" />
-            <element signature="e#3138#3139#0" expanded="true" />
-            <element signature="e#3175#3176#0" expanded="true" />
-            <element signature="e#3223#3224#0" expanded="true" />
-            <element signature="e#3267#3268#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3341#3342#0" expanded="true" />
-            <element signature="e#3389#3390#0" expanded="true" />
-            <element signature="e#3433#3434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_noeat.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.118644">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportNoeat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32142857">
-          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetAllergyBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32142857">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/TransCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6142857">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetOtherBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetSpecialBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6357143">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1781#1782#0" expanded="true" />
-            <element signature="e#1820#1821#0" expanded="true" />
-            <element signature="e#1872#1873#0" expanded="true" />
-            <element signature="e#1920#1921#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#1998#1999#0" expanded="true" />
-            <element signature="e#2050#2051#0" expanded="true" />
-            <element signature="e#2098#2099#0" expanded="true" />
-            <element signature="e#2138#2139#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
-            <element signature="e#2232#2233#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
-            <element signature="e#2318#2319#0" expanded="true" />
-            <element signature="e#2357#2358#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2454#2455#0" expanded="true" />
-            <element signature="e#2491#2492#0" expanded="true" />
-            <element signature="e#2528#2529#0" expanded="true" />
-            <element signature="e#2576#2577#0" expanded="true" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2694#2695#0" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
-            <element signature="e#2786#2787#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Api.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="195" column="58" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Urls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.13670886">
+          <caret line="161" column="40" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.691974">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/RequestManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38394794">
+          <caret line="531" column="4" selection-start-line="531" selection-start-column="4" selection-end-line="531" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportSpecial.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetJobBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6142857">
-          <caret line="126" column="20" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.7657267">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/Api.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.308789">
+          <caret line="181" column="65" selection-start-line="181" selection-start-column="54" selection-end-line="181" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/net/TransCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33254156">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5090909">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#1722#1740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/bean/GetFoodTypeBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#554#555#0" expanded="false" />
+            <element signature="e#598#599#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#664#665#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
+            <element signature="e#1050#1051#0" expanded="false" />
+            <element signature="e#1087#1088#0" expanded="false" />
+            <element signature="e#1124#1125#0" expanded="false" />
+            <element signature="e#1172#1173#0" expanded="false" />
+            <element signature="e#1216#1217#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/PhysiologicalPeriodActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="448" column="61" selection-start-line="448" selection-start-column="49" selection-end-line="448" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/diligroup/UserSet/activity/ReportAllergy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_allergy.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0872483">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
